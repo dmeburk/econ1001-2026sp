@@ -1,5 +1,18 @@
+# Python leftovers
 __pycache__/
 *.pyc
-.DS_Store
+
+# LaTeX auxiliary files (the "trash" generated during PDF builds)
+*.aux
+*.log
+*.toc
+*.out
+*.fdb_latexmk
+*.fls
+
+# The machine's workspace
 midterm2/solutions/build/
-midterm2/solutions/outputs/*.pdf
+
+# System-specific files
+.DS_Store
+Thumbs.db
