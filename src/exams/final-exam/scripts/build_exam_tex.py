@@ -189,7 +189,7 @@ def main():
         fr_section = (
             "% --- Free Response Section ---\n"
             "\\section*{Free Response}\n"
-            "\\noindent\\emph{Write your response to the following questions on the back of the bubble sheet."
+            "\\noindent\\emph{Write your response to the following question on the back of the response sheet."
             " Show your work for partial credit. \\textbf{Box your final answer for each part.}}\n\n"
             "\\begin{questions}[resume]\n"
             f"  {FR_FILE.read_text(encoding='utf-8')}\n"

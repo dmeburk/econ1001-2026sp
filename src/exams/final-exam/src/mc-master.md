@@ -105,7 +105,7 @@ D) (♦) and (■).
 
 ## Q10
 
-Suppose that firms in a market sell an identical good but have \emph{different} average cost curves. Then
+Suppose that firms in a market sell an identical good but have *different* average cost curves. Then
 
 A) There will always be some firms entering and exiting the market.  
 B) In the long-run equilibrium, no firms will have positive economic profit.  
