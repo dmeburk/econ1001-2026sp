@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{newpxtext,newpxmath}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+\newlist{questions}{enumerate}{1}
+\setlist[questions]{
+  label=\textbf{\arabic*.},
+  leftmargin=1.2em,
+  itemsep=.5em,
+  topsep=0.35em,
+  before={\vspace{0.2em}}
+}
+
+\newlist{subquestions}{enumerate}{1}
+\setlist[subquestions]{
+  label=\textbf{\alph*)},
+  leftmargin=1.5em,
+  itemsep=0.20em,
+  topsep=0.05em
+}
+
+\newcommand{\question}[1]{\Needspace{8\baselineskip}\item #1\vspace{-0.3em}}
+
+\begin{document}
+\begin{center}
+  {\Large\textbf{ECON 1001 --- Spring 2026 --- Free Response}}\\[0.3em]
+  {\large Version FR_VERSION_PLACEHOLDER}
+\end{center}
+\vspace{0.5em}
+\noindent\emph{Show your work for partial credit. \textbf{Box your final answer for each part.}}
+\vspace{0.5em}
+
+\begin{questions}
+  FR_CONTENT_PLACEHOLDER
+\end{questions}
+\end{document}

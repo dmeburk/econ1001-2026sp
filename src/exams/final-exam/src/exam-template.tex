@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+% --- Core Packages ---
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.65in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,multicol,xcolor,makecell}
+\usepackage{newpxtext,newpxmath}
+\usepackage{enumitem} % Required for list handling
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage{caption} 
+
+% --- Global Image Path (5 dots to get to root from kitchen/cooking) ---
+\graphicspath{{../../figures/}{../../}}
+\linespread{0.92} % This is what gave you the "Tight" look in MT1
+
+\newlist{questions}{enumerate}{1}
+\setlist[questions]{
+  label=\textbf{\arabic*.},
+  leftmargin=1.2em,
+  itemsep=.5em,   % EXACT MT1 spacing
+  topsep=0.35em,
+  before={\vspace{0.2em}}
+}
+
+\newlist{choices}{enumerate}{1}
+\setlist[choices]{
+  label=\Alph*),
+  leftmargin=1.5em,
+  itemsep=0.20em,  % EXACT MT1 spacing
+  topsep=0.05em,
+  parsep=0pt
+}
+
+% NEW: Matches the choices style for Free Response parts
+\newlist{subquestions}{enumerate}{1}
+\setlist[subquestions]{
+  label=\textbf{\alph*)},
+  leftmargin=1.5em,
+  itemsep=0.20em,  % A tiny bit more space for writing
+  topsep=0.05em
+}
+
+% --- Question Macro ---
+\newcommand{\question}[1]{\Needspace{8\baselineskip}\item #1\vspace{-0.3em}}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % <--- REMOVES THE HORIZONTAL LINE AT TOP
+\renewcommand{\footrulewidth}{0pt} % Removes footer line
+\thispagestyle{empty}
+
+\noindent\textbf{Name:} \rule{3.5in}{0.4pt} \hfill \textbf{NetID:} \rule{1.8in}{0.4pt}
+
+\begin{center}
+  {\Large\textbf{ECON 1001 — Spring 2026 — Final Exam}}\\[0.2em]
+  {\large Version \detokenize{VERSION_PLACEHOLDER}}
+\end{center}
+
+\noindent\emph{All answers must go on the separate response sheet. Each problem or subproblem is worth 4 points.}
+
+%\vspace{.5em}
+%\noindent \textbf{0.} {Indicate your exam version and name on your response sheet.}
+
+% --- Multiple Choice Section ---
+\begin{questions}
+  MC_CONTENT_PLACEHOLDER
+\end{questions}
+
+FR_SECTION_PLACEHOLDER
+
+TABLES_SECTION_PLACEHOLDER
+
+\newpage
+BACK_CONTENT_PLACEHOLDER
+\end{document}

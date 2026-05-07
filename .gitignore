@@ -12,7 +12,10 @@ __pycache__/
 
 # The machine's workspace
 midterm2/solutions/build/
+src/exams/final-exam/build/
+src/exams/final-exam/outputs/
 
 # System-specific files
 .DS_Store
 Thumbs.db
+.Rproj.user
