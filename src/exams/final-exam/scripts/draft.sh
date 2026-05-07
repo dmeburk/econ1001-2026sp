@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Usage: ./scripts/draft.sh [mc|fr] [VERSION] [--pdf]
 #
-#   mc   Iterate on MC questions (src/mc-questions.md)
+#   mc   Iterate on MC questions (src/mc-master.md)
 #        Runs the full MC pipeline for one version.
 #
 #   fr   Iterate on the FR question (src/fr-questions.tex, src/fr_params.csv)

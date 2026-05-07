@@ -3,7 +3,7 @@ import re, sys
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-input_file  = BASE_DIR / "src" / "mc-questions.md"
+input_file  = BASE_DIR / "src" / "mc-master.md"
 output_file = BASE_DIR / "build" / "mc" / "canonical.md"
 tables_file = BASE_DIR / "build" / "mc" / "tables.md"
 

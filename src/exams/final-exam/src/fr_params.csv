@@ -1,6 +1,6 @@
-version,agg_eq,mc_val,loc_eq,vis_eq
-A,10 - 0.5Q,4,12 - Q_L,8 - Q_V
-B,12 - 0.5Q,4,14 - Q_L,10 - Q_V
-C,16 - Q,4,20 - 2Q_L,12 - 2Q_V
-D,10 - 0.25Q,4,12 - 0.5Q_L,8 - 0.5Q_V
-E,20 - 0.5Q,8,24 - Q_L,16 - Q_V
+version,agg_eq,agg_mr,mc_val,loc_eq,loc_mr,vis_eq,vis_mr
+A,10 - 0.5Q,10 - Q,4,12 - Q_L,12 - 2Q_L,8 - Q_V,8 - 2Q_V
+B,12 - 0.5Q,12 - Q,4,14 - Q_L,14 - 2Q_L,10 - Q_V,10 - 2Q_V
+C,16 - Q,16 - 2Q,4,20 - 2Q_L,20 - 4Q_L,12 - 2Q_V,12 - 4Q_V
+D,10 - 0.25Q,10 - 0.5Q,4,12 - 0.5Q_L,12 - Q_L,8 - 0.5Q_V,8 - Q_V
+E,20 - 0.5Q,20 - Q,8,24 - Q_L,24 - 2Q_L,16 - Q_V,16 - 2Q_V

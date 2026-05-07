@@ -3,7 +3,7 @@
 ## Commands
 
 ```bash
-# Iterate on MC questions (src/mc-questions.md)
+# Iterate on MC questions (src/mc-master.md)
 bash scripts/draft.sh mc A --pdf
 
 # Iterate on FR question (src/fr-questions.tex, src/fr_params.csv)
@@ -25,7 +25,7 @@ in isolation. Run `draft.sh mc A` at least once before using FR mode.
 
 | File | What it is |
 |---|---|
-| `mc-questions.md` | MC question bank with correct answers |
+| `mc-master.md` | MC question bank with correct answers |
 | `mc_version_order.csv` | Question order for each version (A–E) |
 | `fr-questions.tex` | FR question text with `[[PLACEHOLDERS]]` |
 | `fr_params.csv` | Version-specific equation values |
@@ -41,7 +41,7 @@ Run automatically by `publish_exam.sh` and `draft.sh`.
 
 | Script | What it does |
 |---|---|
-| `extract_mc_key.py` | Extracts the canonical answer key from `mc-questions.md` |
+| `extract_mc_key.py` | Extracts the canonical answer key from `mc-master.md` |
 | `canonicalize_mc.py` | Cleans MC questions, extracts tables → `build/mc/` |
 | `shuffle_mc.py` | Reorders and shuffles choices for each version → `build/mc/` |
 | `build_fr_tex.py` | Substitutes parameters into FR template → `build/fr/` |

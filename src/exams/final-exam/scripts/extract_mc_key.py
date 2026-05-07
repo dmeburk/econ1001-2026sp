@@ -24,7 +24,7 @@ def main():
     BUILD_DIR = BASE_DIR / "build"
     
     # Redirected to look in 'source/' folder
-    input_file = BASE_DIR / "src" / "mc-questions.md"
+    input_file = BASE_DIR / "src" / "mc-master.md"
     
     output_dir = BUILD_DIR / "mc" / "keys"
     output_file = output_dir / "canonical_key.csv"
