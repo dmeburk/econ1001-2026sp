@@ -1,0 +1,239 @@
+First Name,Last Name,SID,Email,Sections,Total Score,Max Points,Status,Submission ID,Submission Time,Lateness (H:M:S),View Count,Submission Count,1: Question 1 (1.0 pts),2: Question 2 (1.0 pts),3: Question 3 (1.0 pts),4: Question 4 (1.0 pts),5: Question 5 (1.0 pts),6: Question 6 (1.0 pts),7: Question 7 (1.0 pts),8: Question 8 (1.0 pts),9: Question 9 (1.0 pts),10: Question 10 (1.0 pts),11: Question 11 (1.0 pts),12: Question 12 (1.0 pts),13: Question 13 (1.0 pts),14: Question 14 (1.0 pts),15: Question 15 (1.0 pts),16: Question 16 (1.0 pts),17: Question 17 (1.0 pts),18: Question 18 (1.0 pts),19: Question 19 (1.0 pts),20: Question 20 (1.0 pts),21: Question 21 (1.0 pts)
+Faysal,Alameddine,ffa20,ffa20@georgetown.edu,ECON-1001-01.Spring2026,19.0,21.0,Graded,401011763,2026-03-27 11:43:35 -0400,00:00:00,1,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0
+Evangelia,Levy,ll1331,ll1331@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011764,2026-03-27 11:43:35 -0400,00:00:00,1,1,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+Ty,Banks,tbb43,tbb43@georgetown.edu,ECON-1001-01.Spring2026,11.0,21.0,Graded,401011765,2026-03-27 11:43:35 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0
+Lindsay,Morin,lkm92,lkm92@georgetown.edu,ECON-1001-01.Spring2026,14.0,21.0,Graded,401011776,2026-03-27 11:43:35 -0400,00:00:00,2,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,1.0
+Rylan,Filipe,rjf80,rjf80@georgetown.edu,ECON-1001-01.Spring2026,12.0,21.0,Graded,401011777,2026-03-27 11:43:35 -0400,00:00:00,0,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0
+Nandi,Patel,ncp55,ncp55@georgetown.edu,ECON-1001-01.Spring2026,14.0,21.0,Graded,401011786,2026-03-27 11:43:35 -0400,00:00:00,1,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0
+Julia,Nguyen,jn911,jn911@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011787,2026-03-27 11:43:35 -0400,00:00:00,1,1,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+Joyce,Shen,js5604,js5604@georgetown.edu,ECON-1001-01.Spring2026,13.0,21.0,Graded,401011801,2026-03-27 11:43:35 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0
+Iyanah,Mehta,im583,im583@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011802,2026-03-27 11:43:35 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+Franco,Zuniga,fz175,fz175@georgetown.edu,ECON-1001-01.Spring2026,6.0,21.0,Graded,401011804,2026-03-27 11:43:35 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bryan,Bai,bb1324,bb1324@georgetown.edu,ECON-1001-01.Spring2026,13.0,21.0,Graded,401011805,2026-03-27 11:43:35 -0400,00:00:00,2,1,0.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0
+Jackson,Liang,jl3429,jl3429@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011813,2026-03-27 11:43:35 -0400,00:00:00,0,1,1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0
+Will,Souther,wws29,wws29@georgetown.edu,ECON-1001-01.Spring2026,18.0,21.0,Graded,401011816,2026-03-27 11:43:35 -0400,00:00:00,1,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0
+Lucy,Williams,lgw21,lgw21@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011826,2026-03-27 11:43:35 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,0.0
+Johnny,Lin,jl3390,jl3390@georgetown.edu,ECON-1001-01.Spring2026,11.0,21.0,Graded,401011840,2026-03-27 11:43:36 -0400,00:00:00,1,1,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+Jordan,Bowser,jb3198,jb3198@georgetown.edu,ECON-1001-01.Spring2026,8.0,21.0,Graded,401011843,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0
+Chloe,Fong,cf1001,cf1001@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011844,2026-03-27 11:43:36 -0400,00:00:00,3,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0
+Iskender,de Sá Carvalho Patel Pimentel,id268,id268@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011845,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0
+Owen,Kohut,ok197,ok197@georgetown.edu,ECON-1001-01.Spring2026,11.0,21.0,Graded,401011851,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0
+Samantha,Garcia,skg100,skg100@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011852,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,1.0,1.0
+Xiwen,Zhao,xz751,xz751@georgetown.edu,ECON-1001-01.Spring2026,16.0,21.0,Graded,401011855,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0
+Paige,Bannon,pb1101,pb1101@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011860,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0
+Eleanor,Hughes,eh989,eh989@georgetown.edu,ECON-1001-01.Spring2026,8.0,21.0,Graded,401011866,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0
+Grace,Koetje,gek24,gek24@georgetown.edu,ECON-1001-01.Spring2026,14.0,21.0,Graded,401011868,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0
+Lia,Nafe,ln480,ln480@georgetown.edu,ECON-1001-01.Spring2026,14.0,21.0,Graded,401011872,2026-03-27 11:43:36 -0400,00:00:00,1,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
+Victoria,Behrens,vb550,vb550@georgetown.edu,ECON-1001-01.Spring2026,12.0,21.0,Graded,401011880,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
+Felicity,Goudie,fkg8,fkg8@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011886,2026-03-27 11:43:36 -0400,00:00:00,1,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Joy,Xie,jx279,jx279@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011891,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+Sarem,Daffo,sd1638,sd1638@georgetown.edu,ECON-1001-01.Spring2026,14.0,21.0,Graded,401011892,2026-03-27 11:43:36 -0400,00:00:00,3,1,0.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0
+Claire,Fenton,cf981,cf981@georgetown.edu,ECON-1001-01.Spring2026,21.0,21.0,Graded,401011898,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Ellie,Hind,eh1105,eh1105@georgetown.edu,ECON-1001-01.Spring2026,11.0,21.0,Graded,401011900,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0
+Sophie,Chia,src153,src153@georgetown.edu,ECON-1001-01.Spring2026,16.0,21.0,Graded,401011903,2026-03-27 11:43:36 -0400,00:00:00,1,1,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0
+Francesca,Sutch,fs766,fs766@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011908,2026-03-27 11:43:36 -0400,00:00:00,6,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0
+Edward,Thornton,ejt71,ejt71@georgetown.edu,ECON-1001-01.Spring2026,15.0,21.0,Graded,401011911,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,0.0
+Brent,Johns,bj344,bj344@georgetown.edu,ECON-1001-01.Spring2026,12.0,21.0,Graded,401011917,2026-03-27 11:43:36 -0400,00:00:00,1,1,0.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,0.0
+Hope,Rodgers,hcr42,hcr42@georgetown.edu,ECON-1001-01.Spring2026,20.0,21.0,Graded,401011926,2026-03-27 11:43:36 -0400,00:00:00,1,1,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Mya,Loringer,mgl103,mgl103@georgetown.edu,ECON-1001-01.Spring2026,9.0,21.0,Graded,401011935,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0
+Sophia,Nash,sn933,sn933@georgetown.edu,ECON-1001-01.Spring2026,14.0,21.0,Graded,401011950,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,0.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0,1.0,0.0
+Julia,Chen,jc3790,jc3790@georgetown.edu,ECON-1001-01.Spring2026,12.0,21.0,Graded,401011951,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,0.0
+Ke,Lin,kl1260,kl1260@georgetown.edu,ECON-1001-01.Spring2026,17.0,21.0,Graded,401011952,2026-03-27 11:43:36 -0400,00:00:00,0,1,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0
+Abigail,Babigian,ab4640,ab4640@georgetown.edu,ECON-1001-01.Spring2026,20.0,21.0,Graded,401011962,2026-03-27 11:43:36 -0400,00:00:00,0,1,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Justin,Galdamez Lazo,jg2479,jg2479@georgetown.edu,ECON-1001-01.Spring2026,16.0,21.0,Graded,402076624,2026-04-01 10:31:46 -0400,00:00:00,3,1,1.0,0.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Hank,Williams,hcw25,hcw25@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sahil,Morey,sam571,sam571@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Emory,Smith,ets68,ets68@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Finn,Brenan,fkb8,fkb8@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Maggie,Dwyer,mrd148,mrd148@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Mariela,Cruz,mc2942,mc2942@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jayk,Chen,pjc283,pjc283@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jordan,Thomas,jet124,jet124@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Adrian,Evers,ae782,ae782@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Maysam,Ider,mmi44,mmi44@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Scarlett,Street,sms588,sms588@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Chaitanya,Prasad,cp1229,cp1229@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nadean,Abduljelil,nma128,nma128@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Grace,Ko,gek23,gek23@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Veronica,Cherico,vbc8,vbc8@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Lydia,Duckworth,lgd38,lgd38@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sara,Melese,smm475,smm475@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Justin,Ha,jdh334,jdh334@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Warren,Glisk,wag41,wag41@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Izzy,Appelt,isa26,isa26@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Bella,Villarin,gav25,gav25@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Luca,Nascone,lgn8,lgn8@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Marina,Quinterno,mq148,mq148@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Alex,Smetana,aks212,aks212@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Christian,Chun Aguilar,cnc78,cnc78@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sebastien,Neptune,sjn47,sjn47@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Reyan,Badlani,rrb74,rrb74@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Anina,Moses,am4919,am4919@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Abdulbaari,Abdulkadir,aa3247,aa3247@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+German,Cardenas,gc1026,gc1026@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jack,Casey,jc3789,jc3789@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Daniel,DeVerna,dd1224,dd1224@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Storm,Dalberry,sad158,sad158@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jesse,Chuaunsu,jc3738,jc3738@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Dylan,Lytle,dl1307,dl1307@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Dagny,Andreae,da949,da949@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Mackenzie,Gillen,mpg97,mpg97@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Alex,Shipley,as5757,as5757@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Alanna,Thompson,at1654,at1654@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Gwyneth,Vandenberg,gv230,gv230@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Dahlia,Weller,dw1072,dw1072@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Matthew,Martino,mm5531,mm5531@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Anya,Vazirani,arv66,arv66@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ethan,Kuan,ek1072,ek1072@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Saisha,Kumar,sk2623,sk2623@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Maddie,McGill,mcm539,mcm539@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Amelie,Nordstrom,an1112,an1112@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Peter,Schanzenbach,ps1436,ps1436@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+John,Stewart,js5647,js5647@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Christine,Tang,ct1008,ct1008@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Amelia,BURRUS,aab207,aab207@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Lucas,Hayden,lch89,lch89@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Hadley,Faulstich,hdf11,hdf11@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Mia,Oehm,mo936,mo936@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Bella,Cravo Jacobovicz,ac2700,ac2700@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Amirah,Abdul,aa3176,aa3176@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Maggie,Adams,ma2570,ma2570@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Keira,Cushing,kmc398,kmc398@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Catarina,Boechat,cb1957,cb1957@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+John,Urbanowicz,jku3,jku3@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Blake,Mahoney,bm1249,bm1249@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sage,Bellinger-Wehner,sab447,sab447@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Taylor,Glynn,tgg14,tgg14@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Chloe,Taft,cet93,cet93@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Eli,Tuchinsky,et729,et729@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Vayun,Krishna,vk372,vk372@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Matthew,Greco,mg2351,mg2351@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Alexandra,Duff,amd459,amd459@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jane,Rothenberg,jr2193,jr2193@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Asia,Johnson,aj1145,aj1145@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Clara,Stevens,cs2380,cs2380@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Joellaine,Duku,jd2248,jd2248@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Rin,Ford,rf905,rf905@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ruth,Albright,rsa103,rsa103@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Aditya Sai Mani,Penematsa,ap2276,ap2276@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Garrett,Molitor,gmm139,gmm139@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Abigail,Koshy,ask186,ask186@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Stephen,Hamilton,sh2084,sh2084@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+James,Kocis,jwk108,jwk108@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Faisal,Arafa,fa702,fa702@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Michael,Busch,mb3093,mb3093@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Serene,Pai,sp1948,sp1948@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Catherine,Zehner,ccz10,ccz10@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nardos,Getachew,nag85,nag85@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Diego,Zuniga,dz324,dz324@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Kenan,Dagge,kd986,kd986@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Anan,Kutsuzawa,ak2594,ak2594@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jad,Farrell,jf1651,jf1651@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Anne,Tauckus,at1638,at1638@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Garrett,Gao,gg850,gg850@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jiya,Malhotra,jm3854,jm3854@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Samik,Soi,ss5410,ss5410@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jake,Lamb,jl3526,jl3526@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Thea,Jacquand,tlj64,tlj64@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sylvie,Bissell,smb436,smb436@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Gus,Dotson,wad20,wad20@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nick,Kirkpatrick,nak91,nak91@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Hanna,Stubbe,hps15,hps15@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Isabel,Pavlonnis,ip281,ip281@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ava,Zedelmayer,az609,az609@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Selin,Ozdemirli,so591,so591@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Julen,Payne,jap392,jap392@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Max,Allen,ma2446,ma2446@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Benjamin,Wood,byw8,byw8@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Luke,Berishaj,lb1430,lb1430@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Thomas,Shepard,tas194,tas194@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Christina,Kontomichalou,ck1167,ck1167@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Juliette,Robinson,jer173,jer173@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Swann,Li,sl2291,sl2291@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nikhil,Paranjape,nmp66,nmp66@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Carol,Zhou,jz1046,jz1046@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Eden,Fox,eaf143,eaf143@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Erin,Shelton,eas426,eas426@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Irene,Kang,ilk9,ilk9@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Charlie,Farber,cef113,cef113@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Juliet,Rotondo,jgr68,jgr68@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Johnson,Lin,jl3349,jl3349@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Angelina,Ni,an1094,an1094@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Addie,Chauhan,apc112,apc112@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Annabelle,Rabinovici,ar2117,ar2117@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Miranda,Valdez,mav144,mav144@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Omar,Valdivia,ov61,ov61@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Selena,Sun,zs389,zs389@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Penelope,Snoep,pcs70,pcs70@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Skye,Veil,snv15,snv15@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sophia,Randall,sjr127,sjr127@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ananya,Sharma,as5685,as5685@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Charlotte,McGinness,cm2285,cm2285@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Alex,Hee,ah2071,ah2071@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Patrick,Giangiordano,pg845,pg845@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ryan,Chin,rc1739,rc1739@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Maya,Duque-Tadano,md2088,md2088@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ryan,Corrigan,rc1744,rc1744@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Laura,Capps,lc1450,lc1450@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nel,Peter,np743,np743@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Michael,Haas,mh2388,mh2388@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nicholas,Plachta,np744,np744@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sienna,Shah,ss5414,ss5414@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Courtney,Fonte,cf990,cf990@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Emily,DiVenti,ed949,ed949@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sasha,Kirby,ssk159,ssk159@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Celise,Lin,cl1848,cl1848@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jade,Shi,js5584,js5584@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Grace,Li,gl736,gl736@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Katie,Humphrey,kh1388,kh1388@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Upasya,Swarna,us67,us67@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Nicolas,Setton,ns1595,ns1595@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Wrigley,Zbyszewski,wz328,wz328@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Lily,Saal,ls1739,ls1739@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Miranda,Santiago,mes478,mes478@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Min,Jee,mj1007,mj1007@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Graham,McMorris,gm1145,gm1145@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jonathan,Evans,je786,je786@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Zoya,Zwart,zz658,zz658@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Madelyn,Suen,ms5507,ms5507@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+William,Chun,wc852,wc852@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Shabad,Singh,ss5484,ss5484@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jasmine,Jiang,jj1210,jj1210@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+JJ,Johnson,jj1211,jj1211@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jessica,Lee,jl3431,jl3431@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Emma,Bennett,eb1512,eb1512@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Isaiah,Almaguer,ia490,ia490@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Erikha,Lamartiniere,el1106,el1106@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Fatoumata,Barry,fb652,fb652@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Fiona,Turnbull,fct10,fct10@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Cooper,Chang,cc2701,cc2701@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jackie,Doherty,jd2247,jd2247@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sami,Soderlund,scs196,scs196@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Saachi,Rajgarhia,sr1806,sr1806@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Dorsa,Tajvidi,dt797,dt797@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Gabriella,Bautista Bolvito,gb988,gb988@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Libby,Flaisher,laf134,laf134@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Sonia,Pensa,sp1930,sp1930@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Melissa,Vazquez,lv337,lv337@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ella,Yu,ey239,ey239@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Mara,Stephens,ms5552,ms5552@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Jena,Price,jp2283,jp2283@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ronny,Qian,rq64,rq64@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Cameron,Lau,cl1894,cl1894@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Skye,McArthur,sm4374,sm4374@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Randy,Fu,rf913,rf913@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Michelle,Chen,mc3141,mc3141@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Oleksandra,Nikanova,sn967,sn967@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Michii,Flores Vargas,mf1579,mf1579@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Lorelei,Schwarz,ls1772,ls1772@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Leo,Zhang,hlz5,hlz5@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Zoe,Van Zelm,zmv7,zmv7@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Julia,Agrawal,jfa63,jfa63@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Veera,Jetley,vj147,vj147@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Ezri,Rohatgi,er1022,er1022@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Eliza,Doty,ed966,ed966@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Lila,Wesner,lw1010,lw1010@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Cayden,Zhang,cz461,cz461@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Spencer,Peng,sp1686,sp1686@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Joy,Bai,yb297,yb297@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
+Cate,Kingsley,ck1274,ck1274@georgetown.edu,ECON-1001-01.Spring2026,,21.0,Missing
