@@ -1,0 +1,221 @@
+---
+title: "ECON 1001 — Final Exam"
+subtitle: "Spring 2026"
+date: "Grading Note"
+output:
+  pdf_document:
+    number_sections: false
+    fig_caption: false
+header-includes:
+  - \usepackage{mathpazo}
+geometry: "margin=1.1in"
+fontsize: 11pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(here)
+
+# ── Configuration ──────────────────────────────────────────────
+MC_MAX      <- 27
+FR_MAX      <- 24
+EXAM_MAX    <- 132   # 4 * MC_MAX + FR_MAX
+PRELIMINARY <- FALSE
+
+TARGET_MEDIAN <- 84.0
+TARGET_MAX    <- 100.0
+# ───────────────────────────────────────────────────────────────
+
+mc     <- readRDS(here("src/grading/final-exam/build/final_exam_mc_clean.rds"))
+fr     <- readRDS(here("src/grading/final-exam/build/final_exam_fr_clean.rds"))
+curved <- readRDS(here("src/grading/final-exam/build/final_exam_curved.rds"))
+
+mc_graded <- mc     %>% filter(mc_status == "Graded")
+fr_graded <- fr     %>% filter(fr_status == "Graded")
+
+# Reconstruct curve parameters
+raw_median <- median(curved$raw_score)
+raw_max    <- max(curved$raw_score)
+B_param    <- (TARGET_MAX - TARGET_MEDIAN) / (raw_max - raw_median)
+A_param    <- TARGET_MEDIAN - B_param * raw_median
+
+make_stats <- function(x, max_val = NULL, digits = 1) {
+  rows <- tibble(
+    Statistic = c("N", "Mean", "Std dev", "Minimum",
+                  "10th percentile", "25th percentile",
+                  "Median", "75th percentile",
+                  "90th percentile", "Maximum"),
+    Value = c(
+      as.character(sum(!is.na(x))),
+      formatC(mean(x,             na.rm = TRUE), format = "f", digits = digits),
+      formatC(sd(x,               na.rm = TRUE), format = "f", digits = digits),
+      formatC(min(x,              na.rm = TRUE), format = "f", digits = digits),
+      formatC(quantile(x, .10,   na.rm = TRUE), format = "f", digits = digits),
+      formatC(quantile(x, .25,   na.rm = TRUE), format = "f", digits = digits),
+      formatC(median(x,           na.rm = TRUE), format = "f", digits = digits),
+      formatC(quantile(x, .75,   na.rm = TRUE), format = "f", digits = digits),
+      formatC(quantile(x, .90,   na.rm = TRUE), format = "f", digits = digits),
+      formatC(max(x,              na.rm = TRUE), format = "f", digits = digits)
+    )
+  )
+  if (!is.null(max_val))
+    rows <- add_row(rows,
+                    Statistic = paste0("Perfect scores (= ", max_val, ")"),
+                    Value     = as.character(sum(x >= max_val, na.rm = TRUE)))
+  rows
+}
+
+# Dual table: pts + pct side by side
+make_stats_dual <- function(pts_vec, max_val, digits = 1) {
+  pct_vec <- pts_vec / max_val * 100
+  fmtC <- function(x, d = digits) formatC(x, format = "f", digits = d)
+  tibble(
+    Statistic = c("N", "Mean", "Std dev", "Minimum",
+                  "10th percentile", "25th percentile",
+                  "Median", "75th percentile",
+                  "90th percentile", "Maximum",
+                  paste0("Perfect scores (= ", max_val, " pts)")),
+    Points = c(
+      as.character(sum(!is.na(pts_vec))),
+      fmtC(mean(pts_vec,           na.rm = TRUE)),
+      fmtC(sd(pts_vec,             na.rm = TRUE)),
+      fmtC(min(pts_vec,            na.rm = TRUE)),
+      fmtC(quantile(pts_vec, .10,  na.rm = TRUE)),
+      fmtC(quantile(pts_vec, .25,  na.rm = TRUE)),
+      fmtC(median(pts_vec,         na.rm = TRUE)),
+      fmtC(quantile(pts_vec, .75,  na.rm = TRUE)),
+      fmtC(quantile(pts_vec, .90,  na.rm = TRUE)),
+      fmtC(max(pts_vec,            na.rm = TRUE)),
+      as.character(sum(pts_vec >= max_val, na.rm = TRUE))
+    ),
+    `%` = c(
+      "",
+      fmtC(mean(pct_vec,           na.rm = TRUE)),
+      fmtC(sd(pct_vec,             na.rm = TRUE)),
+      fmtC(min(pct_vec,            na.rm = TRUE)),
+      fmtC(quantile(pct_vec, .10,  na.rm = TRUE)),
+      fmtC(quantile(pct_vec, .25,  na.rm = TRUE)),
+      fmtC(median(pct_vec,         na.rm = TRUE)),
+      fmtC(quantile(pct_vec, .75,  na.rm = TRUE)),
+      fmtC(quantile(pct_vec, .90,  na.rm = TRUE)),
+      fmtC(max(pct_vec,            na.rm = TRUE)),
+      ""
+    )
+  )
+}
+
+mean_raw_pct <- round(mean(curved$raw_pct), 1)
+sd_raw_pct   <- round(sd(curved$raw_pct), 1)
+z1_curved    <- round(A_param + B_param * ((mean_raw_pct - sd_raw_pct) / 100 * EXAM_MAX), 1)
+z2_curved    <- round(A_param + B_param * ((mean_raw_pct - 2*sd_raw_pct) / 100 * EXAM_MAX), 1)
+z1_raw_pct   <- round(mean_raw_pct - sd_raw_pct, 1)
+z2_raw_pct   <- round(mean_raw_pct - 2 * sd_raw_pct, 1)
+```
+
+`r if (PRELIMINARY) "**Note: This report is based on partially graded free-response data and will be updated once grading is complete.**\n\n---\n"`
+
+The final exam had `r EXAM_MAX` total possible points:
+27 multiple-choice questions worth 4 points each,
+and 6 free-response parts worth 4 points each. Thus your raw score is \[4 \times MC + FR.\]
+
+In Canvas you will see your **Final Exam — Raw Score** (out of `r EXAM_MAX`)
+and your **Final Exam — Curved Score** (out of 100).
+Your curved score is what I used when computing your course grade.
+
+<!-- ── EDIT: exam-specific narrative ── -->
+
+On Canvas, you may review your exam. Graded scans of your submissions are on Gradescope. The exam problems and solutions are available at the page *Final Exam Debrief*.
+
+Below are summary statistics.
+
+---
+
+## Multiple Choice (out of `r MC_MAX`)
+
+```{r mc-stats}
+kable(make_stats(mc_graded$mc_score, max_val = MC_MAX),
+      booktabs = TRUE, linesep = "", align = "lr",
+      col.names = c("Statistic", "Value")) %>%
+  kable_styling(latex_options = "hold_position",
+                full_width = FALSE, position = "center")
+```
+
+```{r mc-hist, fig.height=3, out.width="88%", fig.align="center"}
+mc_med_pct <- round(median(mc_graded$mc_score) / MC_MAX * 100, 1)
+ggplot(mc_graded, aes(x = mc_score / MC_MAX * 100)) +
+  geom_histogram(binwidth = 100/MC_MAX, fill = "#2c7fb8", color = "white", boundary = 0) +
+  geom_vline(xintercept = mc_med_pct, linetype = "dashed") +
+  labs(x = "MC score (%)", y = "Count",
+       caption = paste0("Dashed line = median (", mc_med_pct, "%)")) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+## Free Response (out of `r FR_MAX`)
+
+```{r fr-stats}
+kable(make_stats(fr_graded$fr_score, max_val = FR_MAX),
+      booktabs = TRUE, linesep = "", align = "lr",
+      col.names = c("Statistic", "Value")) %>%
+  kable_styling(latex_options = "hold_position",
+                full_width = FALSE, position = "center")
+```
+
+```{r fr-hist, fig.height=3, out.width="88%", fig.align="center"}
+fr_med_pct <- round(median(fr_graded$fr_score) / FR_MAX * 100, 1)
+ggplot(fr_graded, aes(x = fr_score / FR_MAX * 100)) +
+  geom_histogram(binwidth = 100/FR_MAX, fill = "#d95f02", color = "white", boundary = 0) +
+  geom_vline(xintercept = fr_med_pct, linetype = "dashed") +
+  labs(x = "FR score (%)", y = "Count",
+       caption = paste0("Dashed line = median (", fr_med_pct, "%)")) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+## Combined Raw Score (out of `r EXAM_MAX`)
+
+```{r raw-stats}
+kable(make_stats_dual(curved$raw_score, EXAM_MAX),
+      booktabs = TRUE, linesep = "", align = "lrr") %>%
+  kable_styling(latex_options = "hold_position",
+                full_width = FALSE, position = "center")
+```
+
+```{r raw-hist, fig.height=3, out.width="88%", fig.align="center"}
+raw_med_pct <- round(median(curved$raw_pct), 1)
+ggplot(curved, aes(x = raw_pct)) +
+  geom_histogram(binwidth = 5, fill = "#756bb1", color = "white", boundary = 0) +
+  geom_vline(xintercept = raw_med_pct, linetype = "dashed") +
+  labs(x = "Raw score (%)", y = "Count",
+       caption = paste0("Dashed line = median (", raw_med_pct, "%)")) +
+  theme_minimal(base_size = 11)
+```
+
+
+---
+
+## Curved Scores (out of 100)
+
+```{r curved-stats}
+kable(make_stats(curved$curved_score, max_val = 100),
+      booktabs = TRUE, linesep = "", align = "lr",
+      col.names = c("Statistic", "Value")) %>%
+  kable_styling(latex_options = "hold_position",
+                full_width = FALSE, position = "center")
+```
+
+```{r curved-hist, fig.height=3, out.width="88%", fig.align="center"}
+cur_med <- median(curved$curved_score)
+ggplot(curved, aes(x = curved_score)) +
+  geom_histogram(binwidth = 5, fill = "#41ab5d", color = "white", boundary = 0) +
+  geom_vline(xintercept = cur_med, linetype = "dashed") +
+  labs(x = "Curved score", y = "Count",
+       caption = paste0("Dashed line = median (", cur_med, ")")) +
+  theme_minimal(base_size = 11)
+```

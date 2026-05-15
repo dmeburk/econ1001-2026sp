@@ -1,0 +1,357 @@
+---
+title: "ECON 1001 Spring 2026: Course Grades Report"
+subtitle: "INTERNAL — NOT FOR DISTRIBUTION"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  pdf_document:
+    number_sections: false
+    fig_caption: false
+header-includes:
+  - \usepackage{mathpazo}
+fontsize: 11pt
+geometry: "margin=1.1in"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+library(tidyverse)
+library(here)
+library(kableExtra)
+library(knitr)
+
+score_to_gp <- function(score) {
+  case_when(
+    is.na(score)   ~ NA_real_,
+    score > 92.2   ~ 4.00,
+    score > 89.3   ~ 3.67,
+    score > 86.3   ~ 3.33,
+    score > 82.3   ~ 3.00,
+    score > 79.3   ~ 2.67,
+    score > 76.3   ~ 2.33,
+    score > 72.3   ~ 2.00,
+    score > 69.3   ~ 1.67,
+    score > 66.3   ~ 1.33,
+    score > 62.3   ~ 1.00,
+    TRUE           ~ 0.00
+  )
+}
+
+gp_to_letter <- function(gp) {
+  case_when(
+    gp >= 4.00 ~ "A",
+    gp >= 3.67 ~ "A-",
+    gp >= 3.33 ~ "B+",
+    gp >= 3.00 ~ "B",
+    gp >= 2.67 ~ "B-",
+    gp >= 2.33 ~ "C+",
+    gp >= 2.00 ~ "C",
+    gp >= 1.67 ~ "C-",
+    gp >= 1.33 ~ "D+",
+    gp >= 1.00 ~ "D",
+    gp >= 0.00 ~ "F",
+    TRUE       ~ NA_character_
+  )
+}
+
+make_stats <- function(x) {
+  tibble(
+    Statistic = c("N", "Mean", "Std dev", "Minimum",
+                  "10th pctile", "25th pctile", "Median",
+                  "75th pctile", "90th pctile", "Maximum"),
+    Value = c(
+      as.character(sum(!is.na(x))),
+      formatC(mean(x,              na.rm = TRUE), format = "f", digits = 1),
+      formatC(sd(x,                na.rm = TRUE), format = "f", digits = 1),
+      formatC(min(x,               na.rm = TRUE), format = "f", digits = 1),
+      formatC(quantile(x, .10,     na.rm = TRUE), format = "f", digits = 1),
+      formatC(quantile(x, .25,     na.rm = TRUE), format = "f", digits = 1),
+      formatC(median(x,            na.rm = TRUE), format = "f", digits = 1),
+      formatC(quantile(x, .75,     na.rm = TRUE), format = "f", digits = 1),
+      formatC(quantile(x, .90,     na.rm = TRUE), format = "f", digits = 1),
+      formatC(max(x,               na.rm = TRUE), format = "f", digits = 1)
+    )
+  )
+}
+
+# Students who received a +2 podcast bonus for excellent podcast (10 → 12)
+EXCELLENT_PODCAST_SIDS <- c(
+  "js5604", "jku3",   "eas426", "fkb8",   "gg850",
+  "ls1772", "ak2594", "zz658",  "ma2570", "jl3390",
+  "mcm539", "cf981",  "mq148",  "ps1436", "aks212"
+)
+
+df <- readRDS(here("src/grading/course/build/course_scores.rds")) %>%
+  mutate(
+    used_alt    = course_score_s2 > course_score_s1,
+    bumped      = !is.na(adjusted_gp) & !is.na(gp) & adjusted_gp > gp,
+    letter      = gp_to_letter(adjusted_gp),
+    letter      = factor(letter,
+                         levels = c("A","A-","B+","B","B-","C+","C","C-","D+","D","F"))
+  )
+```
+
+### Section 1: Overview
+
+```{r overview}
+n_total      <- nrow(df)
+n_graded     <- sum(!is.na(df$final_exam))
+n_missing    <- sum(is.na(df$final_exam))
+n_no_podcast <- sum(df$podcast_unsubmitted, na.rm = TRUE)
+n_bumped     <- sum(df$bumped,   na.rm = TRUE)
+n_failing    <- sum(df$letter == "F", na.rm = TRUE)
+```
+
+`r n_total` students enrolled. `r n_graded` have a final exam score; `r n_missing` do not (absent or pending). `r n_no_podcast` had no podcast submission (score set to 0; see Section 7). `r n_bumped` received a bump (final exam GP > course GP and final $\geq$ midterm average + 10). `r n_failing` received an F.
+
+---
+
+### Section 2: Component Score Summary
+
+```{r component-summary}
+has_final <- df %>% filter(!is.na(final_exam))
+
+component_summary <- has_final %>%
+  select(
+    `PS avg (out of 10)`    = psavg,
+    `Podcast (out of 10)`   = podcast,
+    `Midterm 1`             = midterm1,
+    `Midterm 2`             = midterm2,
+    `Final exam (curved)`   = final_exam,
+    `Course score`          = course_score
+  ) %>%
+  pivot_longer(everything(), names_to = "Component", values_to = "Score") %>%
+  group_by(Component) %>%
+  summarise(
+    N      = sum(!is.na(Score)),
+    Mean   = round(mean(Score,   na.rm = TRUE), 1),
+    Median = round(median(Score, na.rm = TRUE), 1),
+    SD     = round(sd(Score,     na.rm = TRUE), 1),
+    Min    = round(min(Score,    na.rm = TRUE), 1),
+    Max    = round(max(Score,    na.rm = TRUE), 1),
+    .groups = "drop"
+  ) %>%
+  arrange(match(Component, c("PS avg (out of 10)", "Podcast (out of 10)",
+                              "Midterm 1", "Midterm 2",
+                              "Final exam (curved)", "Course score")))
+
+kable(component_summary, booktabs = TRUE, linesep = "",
+      caption = "Summary of Score Components") %>%
+  kable_styling(latex_options = "hold_position", full_width = FALSE, position = "center")
+```
+
+---
+
+### Section 3: Course Score Distribution
+
+```{r course-score-stats}
+kable(make_stats(has_final$course_score),
+      booktabs = TRUE, linesep = "", align = "lr",
+      col.names = c("Statistic", "Value"),
+      caption = "Course Score Distribution (students with final exam)") %>%
+  kable_styling(latex_options = "hold_position", full_width = FALSE, position = "center")
+```
+
+```{r course-score-hist, fig.height=3.2, out.width="88%", fig.align="center"}
+ggplot(has_final, aes(x = course_score)) +
+  geom_histogram(binwidth = 2, fill = "#2c7fb8", color = "white", boundary = 0) +
+  geom_vline(xintercept = median(has_final$course_score, na.rm = TRUE),
+             linetype = "dashed", color = "black") +
+  labs(x = "Course score", y = "Count",
+       caption = paste0("Dashed line = median (",
+                        round(median(has_final$course_score, na.rm = TRUE), 1), ")")) +
+  theme_minimal(base_size = 11)
+```
+
+---
+
+### Section 4: Letter Grade Distribution
+
+```{r grade-dist}
+grade_dist <- df %>%
+  filter(!is.na(letter)) %>%
+  count(letter, .drop = FALSE) %>%
+  mutate(Pct = round(n / sum(n) * 100, 1))
+
+kable(grade_dist, booktabs = TRUE, linesep = "",
+      col.names = c("Grade", "Count", "%"),
+      caption = "Letter Grade Distribution") %>%
+  kable_styling(latex_options = "hold_position", full_width = FALSE, position = "center")
+```
+
+---
+
+### Section 5: Bump Rule Recipients
+
+If a student's final exam GP is higher than their course GP **and** their final exam score is at least 10 points above their midterm average, they receive the final exam GP as their course grade instead.
+
+```{r bumped}
+bumped_tbl <- df %>%
+  filter(bumped) %>%
+  transmute(
+    Student        = student,
+    `Midterm avg`  = round(midterm_avg, 1),
+    `Final exam`   = round(final_exam,  1),
+    `Course score` = round(course_score, 1),
+    `Pre-bump GP`  = gp,
+    `Final GP`     = adjusted_gp,
+    Grade          = letter
+  ) %>%
+  arrange(desc(`Final exam`))
+
+if (nrow(bumped_tbl) == 0) {
+  cat("No students received a bump.\n")
+} else {
+  kable(bumped_tbl, booktabs = TRUE, linesep = "",
+        caption = paste0("Students Who Received a Bump (n = ", nrow(bumped_tbl), ")")) %>%
+    kable_styling(latex_options = c("hold_position", "scale_down"),
+                  full_width = FALSE, position = "center")
+}
+```
+
+---
+
+### Section 6: Students with No Final Exam Score
+
+```{r no-final}
+no_final <- df %>%
+  filter(is.na(final_exam)) %>%
+  transmute(
+    Student   = student,
+    Midterm1  = round(midterm1, 1),
+    Midterm2  = round(midterm2, 1),
+    `PS avg`  = round(psavg, 1)
+  )
+
+if (nrow(no_final) == 0) {
+  cat("All students have a final exam score.\n")
+} else {
+  kable(no_final, booktabs = TRUE, linesep = "",
+        caption = paste0("Students with No Final Exam Score (n = ", nrow(no_final), ")")) %>%
+    kable_styling(latex_options = "hold_position", full_width = FALSE, position = "center")
+}
+```
+
+---
+
+### Section 7: Unsubmitted Podcast — Student Detail
+
+These students had no podcast submission and received a score of 0. Their course scores reflect the 0.
+
+```{r no-podcast}
+no_podcast <- df %>%
+  filter(podcast_unsubmitted) %>%
+  transmute(
+    Student            = student,
+    `PS avg (drop 2)`  = round(psavg,        1),
+    `MT1 curved`       = round(midterm1,      1),
+    `MT2 curved`       = round(midterm2,      1),
+    `Final curved`     = round(final_exam,    1),
+    Podcast            = podcast,
+    `Course score`     = round(course_score,  1),
+    Grade              = letter
+  ) %>%
+  arrange(Student)
+
+if (nrow(no_podcast) == 0) {
+  cat("All students have a podcast submission.\n")
+} else {
+  kable(no_podcast, booktabs = TRUE, linesep = "",
+        caption = paste0("Unsubmitted Podcast — Score set to 0 (n = ", nrow(no_podcast), ")")) %>%
+    kable_styling(latex_options = c("hold_position", "scale_down"),
+                  full_width = FALSE, position = "center", font_size = 8)
+}
+```
+
+---
+
+### Section 8: Excellent Podcast Recipients — Grade Impact
+
+Students who received a +2 podcast bonus (10 → 12) for excellent podcasts, as judged by graders. The bonus adds 1 point to the course score. The table flags whether this pushed anyone across a grade boundary.
+
+```{r excellent-podcast}
+# Counterfactual: podcast score was 10 instead of 12 → course score 1 pt lower
+excellent <- df %>%
+  filter(sis_user_id %in% EXCELLENT_PODCAST_SIDS) %>%
+  mutate(
+    course_score_counter = course_score - 1,
+    gp_counter           = score_to_gp(course_score_counter),
+    grade_changed        = !is.na(gp) & gp != gp_counter
+  ) %>%
+  transmute(
+    Student              = student,
+    `Course score`       = round(course_score, 1),
+    `Score w/o bonus`    = round(course_score_counter, 1),
+    Grade                = letter,
+    `Grade w/o bonus`    = factor(gp_to_letter(gp_counter),
+                                  levels = levels(letter)),
+    `Grade changed?`     = if_else(grade_changed, "YES", "no")
+  ) %>%
+  arrange(desc(`Grade changed?`), Student)
+
+kable(excellent, booktabs = TRUE, linesep = "",
+      caption = "Excellent Podcast Recipients: Grade Impact of +2 Podcast Bonus") %>%
+  kable_styling(latex_options = c("hold_position", "scale_down"),
+                full_width = FALSE, position = "center")
+```
+
+---
+
+### Section 9: Failing Students — Detail
+
+```{r failing}
+failing_tbl <- df %>%
+  filter(letter == "F") %>%
+  transmute(
+    Student        = student,
+    `PS avg`       = round(psavg,        1),
+    `Midterm 1`    = round(midterm1,     1),
+    `Midterm 2`    = round(midterm2,     1),
+    `Final`        = round(final_exam,   1),
+    `Course score` = round(course_score, 1)
+  ) %>%
+  arrange(`Course score`)
+
+if (nrow(failing_tbl) == 0) {
+  cat("No failing students.\n")
+} else {
+  kable(failing_tbl, booktabs = TRUE, linesep = "",
+        caption = paste0("Failing Students (n = ", nrow(failing_tbl), ")")) %>%
+    kable_styling(latex_options = c("hold_position", "scale_down"),
+                  full_width = FALSE, position = "center")
+}
+```
+
+---
+
+### Section 10: Flags and Action Items
+
+- **Missing final exam:** `r n_missing` student(s) have no final exam score and need follow-up.
+- **Unsubmitted podcast:** `r n_no_podcast` student(s) had no podcast submission; scored 0 (see Section 7).
+- **Failing:** `r n_failing` student(s) received an F.
+- **Bump rule:** `r n_bumped` student(s) had their grade bumped by the final-exam-improvement rule.
+
+---
+
+### Section 11: Full Grade Roster
+
+```{r full-roster}
+roster <- df %>%
+  arrange(desc(course_score)) %>%
+  transmute(
+    Student            = str_trunc(student, 35),
+    `PS avg (drop 2)`  = round(psavg,        1),
+    `MT1 curved`       = round(midterm1,      1),
+    `MT2 curved`       = round(midterm2,      1),
+    `Final curved`     = round(final_exam,    1),
+    Podcast            = podcast,
+    `Course score`     = round(course_score,  1),
+    Grade              = letter
+  )
+
+kable(roster, booktabs = TRUE, linesep = "",
+      caption = "Full Grade Roster, Ranked by Course Score") %>%
+  kable_styling(latex_options = c("hold_position", "scale_down"),
+                full_width = FALSE, position = "center",
+                font_size = 8)
+```
