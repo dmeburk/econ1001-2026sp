@@ -1,0 +1,28 @@
+% templates/fr-solutions.tex
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{parskip} % nicer paragraph spacing, no indentation
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext}
+\usepackage{newpxmath}
+\usepackage[scaled=0.9]{inconsolata}
+
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+
+$if(title)$
+\title{$title$}
+\date{}
+\begin{document}
+\maketitle
+$else$
+\begin{document}
+$endif$
+
+$body$
+
+\end{document}

@@ -5,7 +5,8 @@ Suppose if you press a certain large, red button, it instantaneously transfers \
 A) Increase in total economic surplus.  
 B) Decrease in total economic surplus.  
 C) Reduction in efficiency and reduction in inequality.  
-D) Reduction in inequality but no effect on efficiency.  
+D) Reduction in inequality but no effect on efficiency. 
+ 
 **Correct answer:** D
 
 ## Q02
@@ -247,7 +248,7 @@ D) Can't say, because of diminishing marginal utility of wealth.
 
 ## Q22
 
-Rafa's friend comes to him with two investment opportunities. **Investment A** has a higher probability of "paying off" but a lower expected financial payout than **Investment B**. Rafa is risk averse. Which investment will Rafa choose? Suppose Rafa can invest in at most one option. And he may of course choose not to invest at all. What will Rafa choose?
+Rafa's friend comes to him with two investment opportunities. **Investment A** has a higher probability of "paying off" but a lower expected financial payout than **Investment B**. Rafa is risk averse. Suppose Rafa can invest in at most one option and may choose not to invest at all. What will Rafa choose?
 
 A) Investment A.  
 B) Investment B. 

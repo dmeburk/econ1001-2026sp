@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage[most]{tcolorbox}
+
+\newif\ifsolutions
+\solutionstrue   % flip to \solutionsfalse for student version
+%   \solutionsfalse
+
+\tcbset{
+  solutionstyle/.style={
+    enhanced,
+    breakable,
+    frame hidden,
+    borderline west={1pt}{0pt}{blue!60!black},
+    colback=white,
+    sharp corners,
+    left=10pt,
+    right=0pt,
+    top=6pt,
+    bottom=6pt,
+    parskip=0pt,
+    fontupper=\setlength{\parindent}{1.5em}\sffamily,
+    before upper=\noindent,
+  }
+}
+
+\newenvironment{solution}{
+  \ifsolutions
+     \begin{tcolorbox}[solutionstyle]
+     \textbf{Solution.}\\[0.3em]
+  \else
+     \comment
+  \fi
+}{
+  \ifsolutions
+     \end{tcolorbox}
+  \else
+     \endcomment
+  \fi
+}
+
+\geometry{margin=1in}
+
+% ----- Header & footer -----
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{ECON 4433} -- 4 Nov 2025}
+\renewcommand{\headrulewidth}{0.4pt}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{10.5pt} % avoid fancyhdr warning
+
+\fancypagestyle{firstpage}{
+  \fancyhf{}
+  \lhead{\textbf{ECON 4433}}
+  \chead{Problem Set 3 (v2)}
+  \rhead{due 9 Dec.\ 2025}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \cfoot{\thepage}
+}
+
+\setlength{\parskip}{0.6em}
+
+% Enumerate styles if needed:
+\setlist[enumerate,1]{label=\textbf{\arabic*.}}
+\setlist[enumerate,2]{label=\textbf{(\alph*)}}
+% Reduce spacing in enumerates
+\setlist[enumerate]{itemsep=0.3em, topsep=0.3em}
+\setlist[itemize]{itemsep=0.2em, topsep=0.2em}
+
+\begin{document}
+\thispagestyle{firstpage}
+\end{document}

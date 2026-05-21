@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Rscript -e \"library\\(here\\); source\\('src/grading/course/scripts/03_write_outputs.R'\\)\")",
+      "Bash(Rscript -e \"library\\(here\\); source\\('src/grading/common/load-and-inspect-gradebook.R'\\)\")",
+      "Bash(Rscript -e \"library\\(here\\); source\\('src/grading/course/scripts/run_pipeline.R'\\)\")",
+      "Bash(Rscript -e ' *)",
+      "Bash(Rscript -e \"library\\(here\\); source\\('src/grading/course/scripts/04_senior_preliminary_report.R'\\)\")",
+      "Bash(Rscript *)",
+      "Bash(Raw%)",
+      "Bash(awk -F',' 'NR==1 {print; next} \\($1==\"\" || $2==\"\" || $3==\"\"\\) {print NR, $0}' /Users/burk/_teaching/econ1001/src/grading/final-exam/inputs/Final_Exam_FR_scores.csv)",
+      "Bash(latexmk -pdf -interaction=nonstopmode -output-directory=.build solutions.tex)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(python3 *)"
+    ]
+  }
+}

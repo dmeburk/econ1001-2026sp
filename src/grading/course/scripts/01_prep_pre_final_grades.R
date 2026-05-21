@@ -17,7 +17,6 @@ ROOT         <- here::here()
 CANVAS_FILE  <- file.path(ROOT, "src/grading/course/inputs/2026-05-15T0850_Grades-ECON-1001-01.csv")
 OUTPUT       <- file.path(ROOT, "src/grading/course/build/pre_final_grades.rds")
 
-PODCAST_MAX   <- 10   # cap: scores above this (e.g., 12) are floored to 10
 PS_DROP_N     <- 2
 
 # ── LOAD ──────────────────────────────────────────────────────────────────────
@@ -34,11 +33,11 @@ gb <- gb %>%
   )
 
 # ── PODCAST ───────────────────────────────────────────────────────────────────
-# Cap at PODCAST_MAX; NA if ungraded
+# 12 = bump (excellent podcast); 10 = standard; NA if ungraded. No cap applied.
 gb <- gb %>%
   mutate(
     podcast_raw = parse_number(podcast_submission_submit_here_1365978),
-    podcast     = if_else(!is.na(podcast_raw), pmin(podcast_raw, PODCAST_MAX), NA_real_)
+    podcast     = podcast_raw
   )
 
 # AD HOC ADJUSTMENTS: manually assigned podcast scores
@@ -70,7 +69,9 @@ gb <- gb %>%
     podcast = if_else(sis_user_id == "ejt71",   10, podcast),  # Thornton, Edward → same as Lytle, Dylan
     podcast = if_else(sis_user_id == "fb652",   10, podcast),  # Barry, Fatoumata → same as Ford, Rin
     podcast = if_else(sis_user_id == "mes478",  10, podcast),  # Santiago, Miranda → same as Chen, Julia
-    podcast = if_else(sis_user_id %in% EXCELLENT_PODCAST_SIDS, podcast + 2, podcast)
+    podcast = if_else(sis_user_id == "sr1806",  12, podcast),  # Rajgarhia, Saachi: individually assigned
+    podcast = if_else(sis_user_id == "ey239",   10, podcast),  # Yu, Ella: individually assigned
+    podcast = if_else(sis_user_id %in% EXCELLENT_PODCAST_SIDS, pmax(podcast, 12, na.rm = TRUE), podcast)
   )
 
 # AD HOC ADJUSTMENT: students with no podcast submission → score 0

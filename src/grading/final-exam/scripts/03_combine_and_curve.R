@@ -48,6 +48,11 @@ fr_clean <- readRDS(FR_FILE)
 mc_clean <- mc_clean %>%
   mutate(mc_score = if_else(sis_user_id == "rjf80", 13L, mc_score))
 
+# ── AD HOC FR SCORE ADJUSTMENTS ──────────────────────────────────────────────
+# ccz10 (Zehner, Catherine): +4 raw points on final exam (fr_score 20 → 24)
+fr_clean <- fr_clean %>%
+  mutate(fr_score = if_else(sis_user_id == "ccz10", fr_score + 4L, fr_score))
+
 exam <- mc_clean %>%
   left_join(fr_clean, by = "sis_user_id")
 

@@ -1,0 +1,122 @@
+<!-- hosted on codepen.io -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam Grade Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; max-width: 600px; margin: 20px auto; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #2c3e50; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input[type="number"] { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; padding: 10px; background-color: #2980b9; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+        button:hover { background-color: #3498db; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #2c3e50; color: white; }
+        #error-box { color: red; margin-top: 10px; font-weight: bold; text-align: center; }
+        .note { font-size: 0.85em; color: #7f8c8d; margin-top: 15px; line-height: 1.4; }
+        .disclaimer { font-style: italic; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>What Do I Need on the Final?</h2>
+    
+    <div class="form-group">
+        <label for="ps">Problem Set Average (%):</label>
+        <input type="number" id="ps" placeholder="e.g., 95">
+    </div>
+    <div class="form-group">
+        <label for="pod">Podcast Project Score (%):</label>
+        <input type="number" id="pod" placeholder="e.g., 100">
+    </div>
+    <div class="form-group">
+        <label for="m1">Midterm 1 Curved Score (%):</label>
+        <input type="number" id="m1" placeholder="e.g., 82">
+    </div>
+    <div class="form-group">
+        <label for="m2">Midterm 2 Curved Score (%):</label>
+        <input type="number" id="m2" placeholder="e.g., 88">
+    </div>
+
+    <button id="calcBtn">Calculate Needed Final Curved Scores</button>
+
+    <div id="error-box"></div>
+    <div id="results"></div>
+
+    <div class="note">
+        <p><strong>Note:</strong> This calculator automatically checks both the Default grading weights and the Alternate grading weights (which drops your lower midterm) and shows you the easiest path to your target grade.</p>
+        <p class="disclaimer">While this calculator is designed to match the syllabus perfectly (and I did check it!), DB is not responsible for any calculation discrepancies. The official syllabus is 'The Truth.'</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("calcBtn").addEventListener("click", function(event) {
+                event.preventDefault(); 
+                
+                try {
+                    document.getElementById("error-box").innerHTML = "";
+
+                    function getVal(id) {
+                        let val = parseFloat(document.getElementById(id).value);
+                        return isNaN(val) ? 0 : val;
+                    }
+
+                    let ps = getVal('ps');
+                    let pod = getVal('pod');
+                    let m1 = getVal('m1');
+                    let m2 = getVal('m2');
+
+                    let nonExamPts = (ps * 0.10) + (pod * 0.05);
+                    let bestMidterm = Math.max(m1, m2);
+
+                    let targets = [
+                        { name: "A", cutoff: 93 },
+                        { name: "A-", cutoff: 90 },
+                        { name: "B+", cutoff: 87 },
+                        { name: "B", cutoff: 83 },
+                        { name: "B-", cutoff: 80 },
+                        { name: "C+", cutoff: 77 },
+                        { name: "C", cutoff: 73 },
+                        { name: "C-", cutoff: 70 },
+                        { name: "D", cutoff: 63 } // Updated to 63
+                    ];
+
+                    let html = "<table><tr><th>Target Grade</th><th>Needed on Final</th></tr>";
+
+                    for (let i = 0; i < targets.length; i++) {
+                        let target = targets[i].cutoff;
+
+                        let defaultExamPts = (m1 * 0.20) + (m2 * 0.25);
+                        let neededDefault = (target - nonExamPts - defaultExamPts) / 0.40;
+
+                        let altExamPts = (bestMidterm * 0.35);
+                        let neededAlt = (target - nonExamPts - altExamPts) / 0.50;
+
+                        let minNeeded = Math.min(neededDefault, neededAlt);
+                        let displayVal = minNeeded.toFixed(2) + "%";
+                        
+                        if (minNeeded > 100) {
+                            displayVal = "100+";
+                        } else if (minNeeded <= 0) {
+                            displayVal = "<span style='color: green;'>0.00% (Guaranteed)</span>";
+                        }
+
+                        html += "<tr><td><strong>" + targets[i].name + "</strong> (" + target + "%)</td><td>" + displayVal + "</td></tr>";
+                    }
+
+                    html += "</table>";
+                    document.getElementById('results').innerHTML = html;
+
+                } catch (error) {
+                    document.getElementById("error-box").innerHTML = "Error: " + error.message;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

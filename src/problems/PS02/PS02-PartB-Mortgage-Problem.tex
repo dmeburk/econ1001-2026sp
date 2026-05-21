@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext,newpxmath}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage[most]{tcolorbox}
+
+\newif\ifsolutions
+\solutionstrue   % flip to \solutionsfalse for student version
+%   \solutionsfalse
+
+\tcbset{
+  solutionstyle/.style={
+    enhanced,
+    breakable,
+    frame hidden,
+    borderline west={1pt}{0pt}{blue!60!black},
+    colback=white,
+    sharp corners,
+    left=10pt,
+    right=0pt,
+    top=6pt,
+    bottom=6pt,
+    parskip=0pt,
+    fontupper=\setlength{\parindent}{0pt}\sffamily,
+    before upper=\noindent,
+  }
+}
+
+\newenvironment{solution}{
+  \ifsolutions
+     \begin{tcolorbox}[solutionstyle]
+     \textbf{Solution.}\\[0.3em]
+  \else
+     \comment
+  \fi
+}{
+  \ifsolutions
+     \end{tcolorbox}
+  \else
+     \endcomment
+  \fi
+}
+
+\geometry{margin=1in}
+
+% ----- Header & footer -----
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{ECON 1001}}
+\chead{Problem Set 2 -- Part B}
+\rhead{due Jan.\ 23, 2026, 6\,pm}
+\renewcommand{\headrulewidth}{0.4pt}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{10.5pt} % avoid fancyhdr warning
+\addtolength{\topmargin}{-4pt}
+
+% \fancypagestyle{firstpage}{
+%   \fancyhf{}
+%   \lhead{\textbf{ECON 4433}}
+%   \chead{Problem Set 3 (v2)}
+%   \rhead{due 9 Dec.\ 2025}
+%   \renewcommand{\headrulewidth}{0.4pt}
+%   \cfoot{\thepage}
+% }
+
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+
+% Enumerate styles if needed:
+\setlist[enumerate,1]{label=\textbf{\arabic*.}}
+\setlist[enumerate,2]{label=\textbf{(\alph*)}}
+% Reduce spacing in enumerates
+\setlist[enumerate]{itemsep=0.3em, topsep=0.3em}
+\setlist[itemize]{itemsep=0.2em, topsep=0.2em}
+
+\begin{document}
+% \thispagestyle{firstpage}
+\noindent\textbf{Instructions.} Problem Set 2 has two parts: Part A (Achieve) and Part B (this problem). Part B counts for 10 percent of your total Problem Set 2 score.
+
+You may work in a group, but each student must submit their own explanation via Canvas.
+
+The goal of this problem is to think carefully about timing, saving, and opportunity cost.
+
+To answer this problem carefully, you will need to compare the value of
+different streams of payments over time. You should perform whatever
+calculations are necessary to support your conclusions; however, your grade will be based primarily on the clarity and correctness of your economic reasoning rather than on exact numerical precision. \textbf{This problem will be graded with a light touch: a thoughtful, well-explained approach earns full credit even if your calculations are not exact. Short explanations (two or three sentences) are sufficient.}
+
+If you make additional assumptions, state them clearly and proceed.
+Reasonable assumptions will not be penalized.
+
+You may find it helpful to use a spreadsheet to compute and organize future
+values of savings under each option.
+
+After grading, we may ask permission to share one or more especially clear
+student submissions as an informal answer key and study guide.
+
+\noindent\textbf{Submission.}
+Upload a single PDF containing your written explanation to Canvas under the
+\emph{Problem Set 2 -- Part B} assignment. Typed or neatly handwritten submissions are both acceptable. If you wish, you may also upload a spreadsheet showing your calculations.
+
+\begin{enumerate}
+
+    \item \textbf{Mortgage Choice and Saving.}
+
+          It is a few years down the road, and you have settled into a stable career. For the rest of your life, after covering all non-housing expenses, you will have \$15{,}000 per year available to spend on housing. You decide to buy your dream home, which requires borrowing money from a bank. The bank offers you two mortgage options that allow you to purchase the home today:
+
+          \begin{itemize}
+              \item \textbf{The long mortgage:} You pay \$10{,}000 each year for 30 years.
+              \item \textbf{The short mortgage:} You pay \$15{,}000 each year for 15 years.
+          \end{itemize}
+
+          Any portion of your \$15{,}000 annual housing budget that you do not spend on mortgage
+          payments is deposited into a savings account. Your savings account earns a constant
+          annual return of 7 percent. For simplicity, assume there is no inflation and your
+          income does not change over time.
+
+          \begin{enumerate}
+              \item After 30 years, what is the total amount of money you will have paid to the bank
+                    under each mortgage option?
+
+              \item Which mortgage do you choose? Briefly explain your reasoning.
+
+              \item How would your answer change if the savings account instead earned a return of
+                    5 percent per year? Briefly explain.
+          \end{enumerate}
+
+\end{enumerate}
+\end{document}

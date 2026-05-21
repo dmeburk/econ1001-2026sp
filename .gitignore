@@ -19,3 +19,4 @@ src/exams/final-exam/outputs/
 .DS_Store
 Thumbs.db
 .Rproj.user
+.venv/

@@ -1,0 +1,67 @@
+% ============================================================
+% frq-template.tex  (parameterized)
+% ============================================================
+
+% ----------------------------
+% Helpers for FRQ 23 MC table
+% ----------------------------
+\providecommand{\mca}[1]{\number\numexpr \MCa*(#1)\relax}
+\providecommand{\mcb}[1]{\number\numexpr \MCb*(#1)\relax}
+
+% ============================================================
+% Free Response block (styled like MC questions)
+% Assumes your main template defines:
+%   - \newlist{questions}{enumerate}{1}
+%   - \newcommand{\question}{...}
+% ============================================================
+
+\emph{Answer the problems on the back of your bubble sheet.}
+
+\begin{questions}
+    \setcounter{questionsi}{21} % so the next \item in \begin{questions} prints 22.
+    \question{Consider the market for widgets, with demand and supply given by:
+        \[
+            Q_D = \QDintercept - \QDslope P
+            \qquad
+            Q_S = \QSintercept + \QSslope P
+        \]
+        Answer the following:
+        \begin{enumerate}[label=\alph*), itemsep=0.35em, topsep=0.2em]
+            \item Sketch the supply and demand diagram. Be sure to label the \emph{price intercepts}
+                  (i.e., the intercepts on the vertical axis, where \(Q=0\)) of both curves.
+            \item Solve for the equilibrium price, \( P^* \). Show your work.
+            \item Suppose the government imposes a per-unit tax of \( \Tax \) on sellers.
+                  What is the new quantity with the tax, \( Q_t \)?
+            \item With the tax in place, what price do buyers pay, \(P_b\)?
+            \item Does the tax burden fall more on buyers or sellers, or is it split evenly?
+                  (Compare the change in \(P_b\) to the change in the price sellers keep, \(P_s\).)
+                  Briefly explain.
+        \end{enumerate}
+    }
+
+    \question{Two firms, A and B, produce the same good. Their marginal costs are shown in the table below.
+        \begin{center}
+            \begin{tabular}{c|cc}
+                \toprule
+                $Q$ & $MC_A$  & $MC_B$  \\
+                \midrule
+                0   & \mca{0} & \mcb{0} \\
+                1   & \mca{1} & \mcb{1} \\
+                2   & \mca{2} & \mcb{2} \\
+                3   & \mca{3} & \mcb{3} \\
+                4   & \mca{4} & \mcb{4} \\
+                5   & \mca{5} & \mcb{5} \\
+                \bottomrule
+            \end{tabular}
+        \end{center}
+
+        \begin{enumerate}[label=\alph*), itemsep=0.35em, topsep=0.2em]
+            \item First suppose the market price is \( P=\PriceFRQ \). How many units does each firm supply?
+                  (Assume whole-number quantities. As usual, each firm produces when \(MC \le P\) and stops when the next unit would have \(MC>P\).)
+            \item Instead suppose the total quantity to be produced is fixed at \( Q_A + Q_B = \QTotal \).
+                  If production is efficient (total cost minimized), what are \( Q_A \) and \( Q_B \)?
+                  Assume quantities must be whole numbers. Explain briefly.
+        \end{enumerate}
+    }
+
+\end{questions}

@@ -1,0 +1,316 @@
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------
+% Packages
+% ----------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.75in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,multicol,xcolor}
+\usepackage{newpxtext,newpxmath}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{14pt}
+
+% ----------------------------------------------------
+% Page numbering:
+%   - Page 1: no page number
+%   - Pages 2+: centered page number only
+% ----------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}                  % clear header/footer
+\fancyfoot[C]{\thepage}     % page number centered in footer
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\thispagestyle{empty}       % first page has no page number
+
+% ----------------------------------------------------
+% Version number inserted by Python script
+% ----------------------------------------------------
+\newcommand{\examversion}{A}
+
+% ----------------------------------------------------
+% Question + Choices formatting
+% ----------------------------------------------------
+\linespread{0.92}
+
+\newlist{questions}{enumerate}{1}
+\setlist[questions]{%
+  label=\textbf{\arabic*.},
+  leftmargin=1.2em,
+  itemsep=1.1em,   % SPACE BETWEEN QUESTIONS
+  topsep=0.4em,
+  before={\medskip}
+}
+
+\newlist{choices}{enumerate}{1}
+\setlist[choices]{%
+  label=\Alph*),
+  leftmargin=1.5em,
+  itemsep=0.20em,  % SPACE BETWEEN OPTIONS
+  topsep=0.05em,   % GAP BELOW STEM
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ----------------------------------------------------
+% Question macro (page-break control + spacing)
+% ----------------------------------------------------
+\newcommand{\question}[1]{%
+  \Needspace{9\baselineskip}%
+  \item #1%
+  \vspace{-0.45em}  % controls gap between stem and choices
+}
+
+% ----------------------------------------------------
+% Document Start
+% ----------------------------------------------------
+\begin{document}
+
+% ----------------------------------------------------
+% Student Info
+% ----------------------------------------------------
+\vspace*{-1em}
+\noindent\textbf{Name:} \rule{3.5in}{0.4pt}
+\hfill
+\textbf{NetID:} \rule{1.8in}{0.4pt}
+
+\vspace{1.5em}
+
+\begin{center}
+  {\Large\textbf{ECON 1001 — PRACTICE Final Exam}}\\[0.5em]
+  {\large practice for Spring 2026 Final Exam} \\[0.5em]
+  {\small closely based on Fall 2025 Final Exam}
+\end{center}
+
+\vspace{1em}
+
+\noindent \emph{There are 23 multiple choice questions and 2 free response questions.
+  Select the best answer using all models and tools from the course.}
+
+\vspace{.5em}
+
+% ----------------------------------------------------
+% BEGIN MULTIPLE CHOICE (Python inserts content here)
+% ----------------------------------------------------
+
+\begin{questions}
+  \question{Assume that allowing a cheat sheet does not affect the exam or how it is graded. Also assume that the benefits and costs of having a cheat sheet could be measured in dollars for each student. Allowing a cheat sheet on the exam would be efficient}
+  \begin{choices}
+    \item \(\blacklozenge\) If, for most students, the benefits of the cheat sheet outweigh the costs of the cheat sheet.
+    \item \(\blacksquare\) If the sum of the total benefits each student gets from a cheat sheet were greater than the sum of the total costs to each student.
+    \item \(\bullet\) If, before the exam, most students voted that a cheat sheet should be allowed.
+    \item Statements \(\blacklozenge\) and \(\blacksquare\) are both correct.
+  \end{choices}
+
+
+  \question{A new government imposes a tax system where people pay 20\% on income from \$0–\$20,000; 15\% on income from \$20,000–\$40,000; and 10\% on income above \$40,000. (For example, if someone has an income of \$25,000, they pay 20 percent on the first \$20,000 and 15 percent on the next \$5,000.)}
+  \begin{choices}
+    \item \(\blacklozenge\) People with higher annual incomes pay more taxes (in dollars).
+    \item \(\blacksquare\) The tax system is regressive, because higher-income people have a lower average tax rate.
+    \item \(\bullet\) The tax system is progressive, because higher-income people have a higher marginal tax rate.
+    \item Statements \(\blacklozenge\) and \(\blacksquare\) are both correct.
+  \end{choices}
+
+
+  \question{Diminishing marginal utility of income}
+  \begin{choices}
+    \item Implies risk aversion.
+    \item Justifies redistributing money from high-income people to low-income people on utilitarian grounds. (Recall that a utilitarian aims to maximize the sum of individual utilities of each person in society.)
+    \item Does not mean that very rich people don’t care about more money.
+    \item All of the other options are correct.
+  \end{choices}
+
+
+  \question{A profit-maximizing firm that faces a flat demand curve}
+  \begin{choices}
+    \item Has no market power.
+    \item Has an MR curve beneath its demand curve.
+    \item Does not necessarily sell at the quantity where MR = MC.
+    \item Sells a differentiated product.
+  \end{choices}
+
+
+  \question{A firm with market power}
+  \begin{choices}
+    \item \(\blacklozenge\) Sets the price as high as it thinks it can while still maintaining some sales.
+    \item \(\blacksquare\) Maximizes average profit per unit.
+    \item \(\bullet\) Sells the quantity where MR = MC.
+    \item Statements \(\blacksquare\) and \(\bullet\) are both correct.
+  \end{choices}
+
+
+  \question{For a firm with market power (that cannot price discriminate), marginal revenue is}
+  \begin{choices}
+    \item Equal to the price.
+    \item The money obtained from the last customer.
+    \item Equal to average revenue.
+    \item Less than the price, because of the discount effect.
+  \end{choices}
+
+
+  \question{Assuming the product already exists, if a firm has market power, then relative to setting the price where MC = AR,}
+  \begin{choices}
+    \item Producer surplus is higher.
+    \item Consumer surplus is lower.
+    \item Deadweight loss is larger.
+    \item All of the other options are correct.
+  \end{choices}
+
+
+  \question{Governments tend to supply (or heavily regulate) electricity because}
+  \begin{choices}
+    \item Otherwise firms would have little incentive to provide it.
+    \item It is an important source of government revenue.
+    \item The government is especially good at executing complicated projects.
+    \item A free market for electricity would tend to be very inefficient.
+  \end{choices}
+
+
+  \question{Suppose for a firm there were no fixed costs and average variable costs were constant. Then}
+  \begin{choices}
+    \item The AC curve is U-shaped.
+    \item The AC curve is flat.
+    \item The firm will struggle to make profits.
+    \item The price would fall to the average fixed cost.
+  \end{choices}
+
+
+  \question{In Figure 1 (last page)}
+  \begin{choices}
+    \item The firm should sell the quantity that maximizes the gap between AC and demand.
+    \item We can determine the profit-maximizing price even though no units are displayed on the axes.
+    \item Profit is zero at the quantity-price pairs where AC and demand intersect.
+    \item None of the other options is correct.
+  \end{choices}
+
+
+  \question{Suppose all firms in a market sell an identical good and have the same cost curves. Entry will occur}
+  \begin{choices}
+    \item As long as there is no lobbying by the operating firms.
+    \item Until all firms earn zero economic profit.
+    \item Until each firm provides exactly one unit of the good.
+    \item None of the other options is correct.
+  \end{choices}
+
+
+  \question{If a firm can perfectly price discriminate,}
+  \begin{choices}
+    \item Some consumers are better off than if it cannot.
+    \item Deadweight loss is zero (assuming no externalities).
+    \item There is no need to advertise.
+    \item None of the above options is correct.
+  \end{choices}
+
+
+  \question{A college sells tickets to two football games: the \textbf{Big Game} (against a big rival) and the \textbf{Big Win} (against a very weak team). There are two groups of fans (A and B), each with 1,000 people. The college can sell 2,000 tickets per game (assume MC = 0). Table 1 shows the WTP for each type of fan.}
+  \begin{choices}
+    \item Charge 5 for the Big Game and 3 for the Big Win.
+    \item Charge 4 for the Big Game and 2 for the Big Win.
+    \item Charge 7 for a bundle of two tickets (one for each game).
+    \item Charge 6 for a bundle of two tickets (one for each game).
+  \end{choices}
+
+
+  \question{Suppose Mr.\ X and Mr.\ Y face the same purely financial bet. Mr.\ X takes it; Mr.\ Y does not. Assuming both people are risk-averse, which of the following \emph{could} be true?}
+  \begin{choices}
+    \item Mr.\ X is richer than Mr.\ Y.
+    \item Mr.\ X’s utility curve has a different shape from Mr. Y's.
+    \item The bet is a fair bet.
+    \item A and B could be true.
+  \end{choices}
+
+
+  \question{Policy A increases total economic surplus by \$10 million. Policy B increases the surplus by only \$5 million and is less equitable than Policy A. The mayor chooses Policy B. Then we know}
+  \begin{choices}
+    \item \(\blacklozenge\) The mayor is corrupt.
+    \item \(\blacksquare\) The mayor does not care about efficiency at all.
+    \item \(\bullet\) The mayor cannot redistribute surplus however she likes.
+    \item Statements \(\blacklozenge\) and \(\blacksquare\) are both correct.
+  \end{choices}
+
+
+  \question{Talia’s initial utility is 13. She considers a bet: with 60\% probability she loses \$1,000 (her utility would fall to 10), and with 40\% probability she wins \$4,000 (her utility would rise to 20). Will she take the bet?}
+  \begin{choices}
+    \item Yes.
+    \item No.
+    \item It depends on her initial wealth.
+    \item She is indifferent.
+  \end{choices}
+
+
+  \question{Advertising}
+  \begin{choices}
+    \item Increases efficiency.
+    \item Reduces efficiency.
+    \item Shifts a firm’s demand curve inward toward the vertical axis.
+    \item Can increase \textbf{or} decrease efficiency.
+  \end{choices}
+
+
+  \question{A movie theater had been naively charging \$10 for all tickets. After an (accurate) analysis, you determine it should charge \$12 for non-students and \$8 for students. If adopted:}
+  \begin{choices}
+    \item Producer surplus will definitely increase.
+    \item Consumer surplus will definitely increase.
+    \item Total economic surplus will definitely increase.
+    \item All of the other options.
+  \end{choices}
+
+
+  \question{Devan’s Donuts uses a super-secret ingredient. The cost of that ingredient rises by \$1 per donut. Assume straight-line demand and MR curves and a flat MC curve.}
+  \begin{choices}
+    \item Devan raises the price by exactly \$1.
+    \item Devan raises the price by more than \$1.
+    \item Devan raises the price, but by less than \$1.
+    \item Devan keeps the price the same.
+  \end{choices}
+
+
+  \question{Malte sells cupcakes. He paid his annual rent (a fixed cost) in January. By July he realizes total costs for this year will exceed total revenue for this year. Moreover, he knows if he stays in busines his economic profit next year will also be negative. In July, Malte}
+  \begin{choices}
+    \item Stops selling immediately.
+    \item Might stop immediately or might decide to continue to the year’s end.
+    \item Continues to sell this year but not next year.
+    \item Raises the price.
+  \end{choices}
+
+
+  \question{Consider the demand in Table 2. Assume, as always, that MC are positive.}
+  \begin{choices}
+    % tweaked the first item
+    \item \(\blacklozenge\) When lowering price from 7 to 6 AND from 6 to 5, the output effect dominates the discount effect.
+    \item \(\blacksquare\) For some quantities MR is positive and for others it is negative.
+    \item \(\bullet\) The firm might optimize at a price of 5.
+    \item Statements \(\blacksquare\) and \(\bullet\) are both correct.
+  \end{choices}
+
+
+  \question{Two competitors agree to actions that raise profits. They simultaneously choose whether to \textbf{Honor} or \textbf{Break} the agreement. Payoffs are in Table 3. What happens?}
+  \begin{choices}
+    \item A Honors, B Honors.
+    \item A Breaks, B Breaks.
+    \item A Breaks, B Honors.
+    \item A Honors, B Breaks.
+  \end{choices}
+
+
+  \question{Now suppose the same game is \textbf{sequential}, with A moving first. What happens?}
+  \begin{choices}
+    \item A Honors, B Honors.
+    \item A Breaks, B Breaks.
+    \item A Breaks, B Honors.
+    \item A Honors, B Breaks.
+  \end{choices}
+
+\end{questions}
+
+% ----------------------------------------------------
+% FREE RESPONSE SECTION (optional)
+% ----------------------------------------------------
+% \newpage
+% \section*{Free Response}
+% Add FR questions manually here.
+
+\end{document}

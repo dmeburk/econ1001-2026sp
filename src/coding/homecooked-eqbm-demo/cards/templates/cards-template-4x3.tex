@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+
+% ---------- Page setup ----------
+\usepackage[margin=0.5in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+% ---------- Drawing ----------
+\usepackage{tikz}
+
+% ---------- Card ----------
+\newcommand{\card}[3]{%
+\begin{minipage}[t]{6cm}
+\begin{tikzpicture}
+  \draw[rounded corners=6pt, thick] (0,0) rectangle (6,5);
+
+  % Name
+% Name
+\node[anchor=west] at (0.3,4.1)
+  {\Large\bfseries #1};
+
+% Role
+\node[anchor=west] at (0.3,3.0)
+  {\normalsize #2};
+
+% Price
+\node at (3,1.4)
+  {\Huge\bfseries \$#3};
+\end{tikzpicture}
+\end{minipage}%
+}
+
+% ---------- Row helper (THIS IS THE FIX) ----------
+\newcommand{\cardrow}[3]{%
+\noindent
+#1\hfill#2\hfill#3
+\par\vspace{1.0cm}
+}
+
+\begin{document}
+\mbox{} % force first page output
+
+% ==================================================
+% R WILL WRITE \cardrow{...}{...}{...} BELOW
+% ==================================================
+
+% --- BEGIN CARDS ---
+% --- END CARDS ---
+
+\end{document}

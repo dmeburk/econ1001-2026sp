@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/burk/_teaching/econ1001/src/**)",
+      "Bash(awk *)",
+      "Bash(chmod +x *)",
+      "Bash(python3 scripts/process_mc_key.py)",
+      "Bash(python3 scripts/process_mc_data.py)",
+      "Bash(python3 *)",
+      "Bash(.venv/bin/python3 *)",
+      "Bash(latexmk -pdf -silent -output-directory=\"../finished\" \"mc_A.tex\")",
+      "Bash(mkdir -p outputs)",
+      "Bash(cp build/finished/mc___TRACKED_VAR__.pdf outputs/FinalExam_Version___TRACKED_VAR__.pdf)",
+      "Bash(cp \"build/keys/final_answer_key.csv\" \"outputs/FinalExam_MASTER_KEY.csv\")",
+      "Bash(bash scripts/mc_draft_pipeline.sh A)",
+      "Bash(pip3 install *)",
+      "Bash(bash scripts/mc_draft_pipeline.sh A --pdf)",
+      "Bash(open *)",
+      "Bash(bash scripts/fr_draft_pipeline.sh A --pdf)",
+      "Bash(bash *)",
+      "Bash(git add *)"
+    ]
+  }
+}

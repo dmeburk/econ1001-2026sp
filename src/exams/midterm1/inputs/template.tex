@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+
+% ----------------------------------------------------
+% Packages
+% ----------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.75in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,multicol,xcolor}
+\usepackage{newpxtext,newpxmath}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\graphicspath{{../../inputs/figures/}}
+
+\setlength{\headheight}{14pt}
+
+% ----------------------------------------------------
+% Page numbering:
+%   - Page 1: no page number
+%   - Pages 2+: centered page number only
+% ----------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}                  % clear header/footer
+\fancyfoot[C]{\thepage}     % page number centered in footer
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\thispagestyle{empty}       % first page has no page number
+
+% ----------------------------------------------------
+% Version number inserted by Python script
+% ----------------------------------------------------
+\newcommand{\examversion}{\detokenize{VERSION_PLACEHOLDER}}
+
+% ----------------------------------------------------
+% Question + Choices formatting
+% ----------------------------------------------------
+\linespread{0.92}
+
+\newlist{questions}{enumerate}{1}
+\setlist[questions]{%
+  label=\textbf{\arabic*.},
+  leftmargin=1.2em,
+  itemsep=.95em,   % SPACE BETWEEN QUESTIONS
+  topsep=0.35em,
+  before={\vspace{0.2em}}
+}
+
+\newlist{choices}{enumerate}{1}
+\setlist[choices]{%
+  label=\Alph*),
+  leftmargin=1.5em,
+  itemsep=0.20em,  % SPACE BETWEEN OPTIONS
+  topsep=0.05em,   % GAP BELOW STEM
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ----------------------------------------------------
+% Question macro (page-break control + spacing)
+% ----------------------------------------------------
+\newcommand{\question}[1]{%
+  \Needspace{7\baselineskip}%
+  \item #1%
+  \vspace{-0.45em}  % controls gap between stem and choices
+}
+
+% ----------------------------------------------------
+% Document Start
+% ----------------------------------------------------
+\begin{document}
+
+% ----------------------------------------------------
+% Student Info
+% ----------------------------------------------------
+\vspace*{-1.2em}
+%\noindent\textbf{Name:} \rule{3.5in}{0.4pt}
+\noindent\textbf{Name:} \rule{3.5in}{0.4pt}
+\hfill
+\textbf{NetID:} \rule{1.8in}{0.4pt}
+
+\vspace{.8em}
+
+\begin{center}
+  {\Large\textbf{ECON 1001 — Spring 2026 — Midterm 1}}\\[0.5em]
+  {\large Version \examversion}
+\end{center}
+
+\vspace{.8em}
+
+\noindent
+\emph{There are 21 multiple choice questions and 2 free response questions. Select the best answer using the models from the course. Each MC question and each FR subquestion is worth 4 points. There are a total of 112 possible points. \textbf{All of your answers must go on the separate response sheet.}}
+
+\vspace{1.2em}
+
+% ----------------------------------------------------
+% BEGIN MULTIPLE CHOICE (Python inserts content here)
+% ----------------------------------------------------
+
+\noindent \textbf{0.} {Indicate your exam version, name, and NetID \textbf{on both sides} of your response sheet.}
+
+\begin{questions}
+  MC_CONTENT_PLACEHOLDER
+\end{questions}
+
+% ----------------------------------------------------
+% FREE RESPONSE SECTION (optional)
+% ----------------------------------------------------
+\newpage
+\section*{Free Response}
+FR_CONTENT_PLACEHOLDER
+
+% ----------------------------------------------------
+% BACK PAGE (FIGURES / TABLES)
+% ----------------------------------------------------
+\newpage
+BACK_CONTENT_PLACEHOLDER
+\end{document}

@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+
+% ---------- Page setup ----------
+\usepackage[margin=0.5in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+% ---------- Drawing ----------
+\usepackage{tikz}
+
+% ---------- Card ----------
+\newcommand{\card}[3]{%
+\begin{minipage}[t]{6cm}
+\begin{tikzpicture}
+  \draw[rounded corners=6pt, thick] (0,0) rectangle (6,5);
+
+  % Name
+% Name
+\node[anchor=west] at (0.3,4.1)
+  {\Large\bfseries #1};
+
+% Role
+\node[anchor=west] at (0.3,3.0)
+  {\normalsize #2};
+
+% Price
+\node at (3,1.4)
+  {\Huge\bfseries \$#3};
+\end{tikzpicture}
+\end{minipage}%
+}
+
+% ---------- Row helper (THIS IS THE FIX) ----------
+\newcommand{\cardrow}[3]{%
+\noindent
+#1\hfill#2\hfill#3
+\par\vspace{1.0cm}
+}
+
+\begin{document}
+\mbox{} % force first page output
+
+% ==================================================
+% R WILL WRITE \cardrow{...}{...}{...} BELOW
+% ==================================================
+
+% --- BEGIN CARDS ---
+\cardrow{\card{Michael}{Seller (WTA)}{7.5}}{\card{Maddie}{Buyer (WTP)}{25}}{\card{Bella}{Buyer (WTP)}{25}}
+\cardrow{\card{Jane}{Buyer (WTP)}{8}}{\card{Bella}{Buyer (WTP)}{15}}{\card{Garrett}{Buyer (WTP)}{20}}
+\cardrow{\card{madelyn}{Buyer (WTP)}{15}}{\card{Aisa}{Buyer (WTP)}{10}}{\card{Fiona}{Buyer (WTP)}{10}}
+\cardrow{\card{Jack Stewart}{Buyer (WTP)}{12}}{\card{Selena}{Buyer (WTP)}{15}}{\card{Leo}{Seller (WTA)}{25}}
+\newpage
+\cardrow{\card{Joellaine/Jojo}{Buyer (WTP)}{15}}{\card{Julia}{Buyer (WTP)}{15}}{\card{Meals}{Seller (WTA)}{54}}
+\cardrow{\card{Fatou}{Seller (WTA)}{10}}{\card{Nel}{Buyer (WTP)}{8}}{\card{Ruth}{Seller (WTA)}{15}}
+\cardrow{\card{Michelle Chen}{Seller (WTA)}{20}}{\card{sm}{Seller (WTA)}{20}}{\card{Justin Galdamez Lazo}{Seller (WTA)}{38}}
+\cardrow{\card{Nick}{Buyer (WTP)}{13}}{\card{Sam}{Buyer (WTP)}{12}}{\card{Courtney}{Buyer (WTP)}{25}}
+\newpage
+\cardrow{\card{Christine Tang}{Buyer (WTP)}{20}}{\card{Taylor}{Buyer (WTP)}{10}}{\card{Cate}{Buyer (WTP)}{15}}
+\cardrow{\card{Claire}{Seller (WTA)}{22}}{\card{Alanna}{Buyer (WTP)}{25}}{\card{Warren G}{Buyer (WTP)}{20}}
+\cardrow{\card{Sasha}{Seller (WTA)}{30}}{\card{Dahlia}{Seller (WTA)}{15}}{\card{Omar}{Seller (WTA)}{20}}
+\cardrow{\card{Mack}{Buyer (WTP)}{10}}{\card{Grace}{Buyer (WTP)}{5}}{\card{patrick}{Seller (WTA)}{15}}
+\newpage
+\cardrow{\card{Jordan}{Buyer (WTP)}{20}}{\card{rhys}{Seller (WTA)}{27}}{\card{Sonia}{Buyer (WTP)}{30}}
+\cardrow{\card{Francesca}{Seller (WTA)}{18}}{\card{Charlotte}{Seller (WTA)}{10}}{\card{Lindsay morin}{Buyer (WTP)}{20}}
+\cardrow{\card{Lucy}{Seller (WTA)}{30}}{\card{Grace}{Seller (WTA)}{15}}{\card{Dylan}{Seller (WTA)}{50}}
+\cardrow{\card{Cooper}{Seller (WTA)}{14}}{\card{Mya}{Buyer (WTP)}{15}}{\card{Jeffrey}{Seller (WTA)}{0}}
+\newpage
+\cardrow{\card{Ronny}{Buyer (WTP)}{50}}{\card{Jane}{Buyer (WTP)}{35}}{\card{Anya}{Seller (WTA)}{15}}
+\cardrow{\card{Julia}{Seller (WTA)}{20}}{\card{Gabriella}{Buyer (WTP)}{7}}{\card{Grace}{Seller (WTA)}{20}}
+\cardrow{\card{Garrett Gao}{Buyer (WTP)}{15}}{\card{Marina}{Buyer (WTP)}{10}}{\card{Paige}{Buyer (WTP)}{20}}
+\cardrow{\card{Jonathan}{Buyer (WTP)}{20}}{\card{Nikhil}{Seller (WTA)}{20}}{\card{Shabad}{Seller (WTA)}{15}}
+\newpage
+\cardrow{\card{Ananya}{Buyer (WTP)}{15}}{\card{Nick}{Buyer (WTP)}{9}}{\card{Storm}{Seller (WTA)}{10}}
+\cardrow{\card{Celestia}{Buyer (WTP)}{25}}{\card{grey}{Buyer (WTP)}{13}}{\card{Samik}{Buyer (WTP)}{11}}
+\cardrow{\card{Iyanah}{Seller (WTA)}{15}}{\card{Erikha}{Seller (WTA)}{20}}{\card{Skye}{Buyer (WTP)}{14}}
+\cardrow{\card{Irene Kang}{Seller (WTA)}{13}}{\card{Ava}{Buyer (WTP)}{10}}{\card{Ryan Chin}{Buyer (WTP)}{450}}
+\newpage
+\cardrow{\card{Johnny}{Seller (WTA)}{20}}{\card{Justin Ha}{Seller (WTA)}{7}}{\card{Jena}{Seller (WTA)}{10}}
+\cardrow{\card{Sienna}{Buyer (WTP)}{25}}{\card{Jesse}{Buyer (WTP)}{20}}{\card{Reyan}{Seller (WTA)}{12}}
+\cardrow{\card{Ryan}{Buyer (WTP)}{17}}{\card{Victoria}{Seller (WTA)}{15}}{\card{Cayden}{Buyer (WTP)}{10}}
+\cardrow{\card{Joyce}{Buyer (WTP)}{30}}{\card{Serene}{Buyer (WTP)}{10}}{\card{Ryan}{Buyer (WTP)}{12}}
+\newpage
+\cardrow{\card{Anina Moses}{Buyer (WTP)}{15}}{\card{Fasoulia}{Buyer (WTP)}{100}}{\card{Julia}{Buyer (WTP)}{20}}
+\cardrow{\card{Daniel Daverna}{Buyer (WTP)}{30}}{\card{William Chuzz}{Buyer (WTP)}{14}}{\card{Jiya Malhotra}{Buyer (WTP)}{18}}
+\cardrow{\card{Jena}{Buyer (WTP)}{10}}{\card{Will}{Seller (WTA)}{12}}{\card{brent}{Seller (WTA)}{20}}
+\cardrow{\card{Maggie}{Seller (WTA)}{15}}{\card{alex}{Buyer (WTP)}{7}}{\card{Ned}{Seller (WTA)}{10}}
+\newpage
+\cardrow{\card{Dorsa}{Seller (WTA)}{7}}{\card{Lydia}{Seller (WTA)}{12}}{\card{Selin}{Seller (WTA)}{30}}
+\cardrow{\card{Thomas}{Buyer (WTP)}{7}}{\card{Hanna}{Buyer (WTP)}{15}}{\card{Bryan}{Buyer (WTP)}{15}}
+\cardrow{\card{Emma}{Seller (WTA)}{20}}{\card{Linn}{Buyer (WTP)}{12}}{\card{Will}{Buyer (WTP)}{15}}
+\cardrow{\card{Emily}{Buyer (WTP)}{20}}{\card{Felicity}{Seller (WTA)}{15}}{\card{Joy}{Buyer (WTP)}{45}}
+\newpage
+\cardrow{\card{Eliza}{Seller (WTA)}{20}}{\card{Annabelle}{Seller (WTA)}{10}}{\card{Hadley}{Buyer (WTP)}{20}}
+\cardrow{\card{Hope}{Buyer (WTP)}{5}}{\card{Abby}{Buyer (WTP)}{8}}{\card{Saisha}{Buyer (WTP)}{30}}
+\cardrow{\card{Veronica}{Buyer (WTP)}{6}}{\card{Sasha}{Buyer (WTP)}{15}}{\card{Nadean}{Buyer (WTP)}{20}}
+\cardrow{\card{Maysam}{Buyer (WTP)}{30}}{\card{Carol}{Buyer (WTP)}{30}}{\card{Ezri}{Seller (WTA)}{23}}
+\newpage
+\cardrow{\card{Catarina}{Buyer (WTP)}{20}}{\card{Chris}{Buyer (WTP)}{5}}{\card{Adrian}{Buyer (WTP)}{10}}
+\cardrow{\card{Will Chaffee}{Buyer (WTP)}{15}}{\card{Alex Duff}{Seller (WTA)}{20}}{\card{German}{Seller (WTA)}{13}}
+\cardrow{\card{Lily Saal}{Seller (WTA)}{50}}{\card{Libby}{Seller (WTA)}{25}}{\card{Celise Lin}{Buyer (WTP)}{14}}
+\cardrow{\card{Daniel}{Buyer (WTP)}{25}}{\card{Jordan}{Buyer (WTP)}{15}}{\card{Gus}{Buyer (WTP)}{17}}
+\newpage
+\cardrow{\card{Jad}{Buyer (WTP)}{15}}{\card{John}{Buyer (WTP)}{15}}{\card{Jackie}{Seller (WTA)}{12}}
+\cardrow{\card{Julia Jr.}{Buyer (WTP)}{20}}{\card{Ryan Jr.}{Buyer (WTP)}{17}}{\card{Jeffrey Jr.}{Seller (WTA)}{0}}
+\cardrow{\card{Ava Jr.}{Buyer (WTP)}{10}}{\card{Thomas Jr.}{Buyer (WTP)}{7}}{\card{Joy Jr.}{Buyer (WTP)}{45}}
+\cardrow{\card{Erikha Jr.}{Seller (WTA)}{20}}{\card{Grace Jr.}{Seller (WTA)}{20}}{\card{Veronica Jr.}{Buyer (WTP)}{6}}
+\newpage
+\cardrow{\card{Saisha Jr.}{Buyer (WTP)}{30}}{\card{Justin Ha Jr.}{Seller (WTA)}{7}}{\card{Bella Jr.}{Buyer (WTP)}{25}}
+\cardrow{\card{Will Jr.}{Seller (WTA)}{12}}{\card{Michael Jr.}{Seller (WTA)}{7.5}}{\card{Aisa Jr.}{Buyer (WTP)}{10}}
+\cardrow{\card{Meals Jr.}{Seller (WTA)}{54}}{\card{Nick Jr.}{Buyer (WTP)}{9}}{\card{Dahlia Jr.}{Seller (WTA)}{15}}
+\cardrow{\card{Michael Jr.}{Seller (WTA)}{7.5}}{\card{Maddie Jr.}{Buyer (WTP)}{25}}{\card{Sasha Jr.}{Buyer (WTP)}{15}}
+\newpage
+\cardrow{\card{Julia Jr.}{Buyer (WTP)}{20}}{\card{Nel Jr.}{Buyer (WTP)}{8}}{\card{Joy Jr.}{Buyer (WTP)}{45}}
+\cardrow{\card{sm Jr.}{Seller (WTA)}{20}}{\card{Christine Tang Jr.}{Buyer (WTP)}{20}}{\card{Paige Jr.}{Buyer (WTP)}{20}}
+\cardrow{\card{Sasha Jr.}{Buyer (WTP)}{15}}{\card{Ruth Jr.}{Seller (WTA)}{15}}{\card{Mack Jr.}{Buyer (WTP)}{10}}
+\cardrow{\card{Gus Jr.}{Buyer (WTP)}{17}}{\card{Maddie Jr.}{Buyer (WTP)}{25}}{\card{Anina Moses Jr.}{Buyer (WTP)}{15}}
+\newpage
+\cardrow{\card{Catarina Jr.}{Buyer (WTP)}{20}}{\card{Hadley Jr.}{Buyer (WTP)}{20}}{\card{Joellaine/Jojo Jr.}{Buyer (WTP)}{15}}
+\cardrow{\card{Lucy Jr.}{Seller (WTA)}{30}}{\card{Sasha Jr.}{Seller (WTA)}{30}}{\card{John Jr.}{Buyer (WTP)}{15}}
+\cardrow{\card{Chris Jr.}{Buyer (WTP)}{5}}{\card{Mack Jr.}{Buyer (WTP)}{10}}{\card{Selena Jr.}{Buyer (WTP)}{15}}
+\cardrow{\card{Catarina Jr.}{Buyer (WTP)}{20}}{\card{Ruth Jr.}{Seller (WTA)}{15}}{\card{Annabelle Jr.}{Seller (WTA)}{10}}
+\newpage
+\cardrow{\card{Samik Jr.}{Buyer (WTP)}{11}}{\card{Sasha Jr.}{Buyer (WTP)}{15}}{\card{Lindsay morin Jr.}{Buyer (WTP)}{20}}
+\cardrow{\card{Cate Jr.}{Buyer (WTP)}{15}}{\card{Maysam Jr.}{Buyer (WTP)}{30}}{\card{Michelle Chen Jr.}{Seller (WTA)}{20}}
+\cardrow{\card{Ananya Jr.}{Buyer (WTP)}{15}}{\card{Lydia Jr.}{Seller (WTA)}{12}}{\card{Fasoulia Jr.}{Buyer (WTP)}{100}}
+\cardrow{\card{Omar Jr.}{Seller (WTA)}{20}}{\card{Julia Jr.}{Buyer (WTP)}{15}}{\card{Claire Jr.}{Seller (WTA)}{22}}
+\newpage
+\cardrow{\card{Warren G Jr.}{Buyer (WTP)}{20}}{\card{Jordan Jr.}{Buyer (WTP)}{15}}{\card{Erikha Jr.}{Seller (WTA)}{20}}
+\cardrow{\card{Ryan Jr.}{Buyer (WTP)}{17}}{\card{Adrian Jr.}{Buyer (WTP)}{10}}{\card{Selena Jr.}{Buyer (WTP)}{15}}
+\cardrow{\card{Cooper Jr.}{Seller (WTA)}{14}}{\card{Michelle Chen Jr.}{Seller (WTA)}{20}}{\card{Michelle Chen Jr.}{Seller (WTA)}{20}}
+\cardrow{\card{Selin Jr.}{Seller (WTA)}{30}}{\card{Nick Jr.}{Buyer (WTP)}{13}}{\card{Fasoulia Jr.}{Buyer (WTP)}{100}}
+\newpage
+\cardrow{\card{Nick Jr.}{Buyer (WTP)}{13}}{\card{Garrett Jr.}{Buyer (WTP)}{20}}{\card{Carol Jr.}{Buyer (WTP)}{30}}
+\cardrow{\card{Veronica Jr.}{Buyer (WTP)}{6}}{\card{Veronica Jr.}{Buyer (WTP)}{6}}{\card{Sonia Jr.}{Buyer (WTP)}{30}}
+\cardrow{\card{Jena Jr.}{Buyer (WTP)}{10}}{\card{Chris Jr.}{Buyer (WTP)}{5}}{\card{Nikhil Jr.}{Seller (WTA)}{20}}
+\cardrow{\card{Meals Jr.}{Seller (WTA)}{54}}{\card{Jordan Jr.}{Buyer (WTP)}{20}}{\card{Dahlia Jr.}{Seller (WTA)}{15}}
+\newpage
+\cardrow{\card{Grace Jr.}{Seller (WTA)}{15}}{\card{Ezri Jr.}{Seller (WTA)}{23}}{\card{Jeffrey Jr.}{Seller (WTA)}{0}}
+\cardrow{\card{Ezri Jr.}{Seller (WTA)}{23}}{\card{brent Jr.}{Seller (WTA)}{20}}{\card{Aisa Jr.}{Buyer (WTP)}{10}}
+\cardrow{\card{Sam Jr.}{Buyer (WTP)}{12}}{\card{Warren G Jr.}{Buyer (WTP)}{20}}{\card{Maggie Jr.}{Seller (WTA)}{15}}
+% --- END CARDS ---
+
+\end{document}
